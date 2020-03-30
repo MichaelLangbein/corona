@@ -20,4 +20,7 @@ https://www.govdata.de/web/guest/daten/-/details/stlae-service-12411-08-01-4
 ### bevoelkerungsdichte.csv
 https://www.govdata.de/web/guest/daten/-/details/stlae-service-ai002-1
 
+### dichte.csv
+https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland
+
 

@@ -1,0 +1,558 @@
+GENESIS-Tabelle: 12411-08-01-4;;;;;;;;
+Jugendquotient, Altenquotient - Stichtag 31.12. - regionale;;;;;;;;
+Tiefe: Kreise und krfr. Städte;;;;;;;;
+Fortschreibung des Bevölkerungsstandes;;;;;;;;
+;;;Jugendquotient;Jugendquotient;Jugendquotient;Altenquotient;Altenquotient;Altenquotient
+;;;Insgesamt;männlich;weiblich;Insgesamt;männlich;weiblich
+;;;Anzahl;Anzahl;Anzahl;Anzahl;Anzahl;Anzahl
+31.12.2018;DG;Deutschland;30,7;31,2;30,2;35,9;31;40,9
+31.12.2018;1;  Schleswig-Holstein;31,5;32,4;30,6;39,2;34,9;43,5
+31.12.2018;1001;      Flensburg, Kreisfreie Stadt;29,1;29,1;29,1;32,5;27,6;37,6
+31.12.2018;1002;      Kiel, Landeshauptstadt, Kreisfreie Stadt;26,4;27,1;25,6;28,8;25;32,6
+31.12.2018;1003;      Lübeck, Hansestadt, Kreisfreie Stadt;28,7;29,8;27,6;38,9;33;44,6
+31.12.2018;1004;      Neumünster, Kreisfreie Stadt;32,2;32,8;31,5;38,6;32,6;44,7
+31.12.2018;1051;      Dithmarschen, Landkreis;31,8;32,3;31,2;43,3;39,3;47,4
+31.12.2018;1053;      Herzogtum Lauenburg, Landkreis;33,7;34,8;32,6;38,5;34,3;42,7
+31.12.2018;1054;      Nordfriesland, Landkreis;31,3;32,3;30,3;41,9;37,5;46,2
+31.12.2018;1055;      Ostholstein, Landkreis;29,5;30,6;28,4;49,1;45;53,1
+31.12.2018;1056;      Pinneberg, Landkreis;32,6;33,3;31,8;37,6;33;42,3
+31.12.2018;1057;      Plön, Landkreis;32,5;33,7;31,2;46,8;42,9;50,7
+31.12.2018;1058;      Rendsburg-Eckernförde, Landkreis;33,4;34,6;32,2;41;37,5;44,5
+31.12.2018;1059;      Schleswig-Flensburg, Landkreis;33,8;35;32,6;41,9;38,4;45,4
+31.12.2018;1060;      Segeberg, Landkreis;32,4;33,1;31,6;36,8;32,6;41
+31.12.2018;1061;      Steinburg, Landkreis;31,6;32;31,2;38,8;34,2;43,4
+31.12.2018;1062;      Stormarn, Landkreis;33,9;34,9;32,9;40,3;36,2;44,3
+31.12.2018;2;  Hamburg;29,3;30,2;28,4;28,9;24,8;33
+31.12.2018;3;  Niedersachsen;31,9;32,5;31,2;37;32,4;41,7
+31.12.2018;31;    Braunschweig, Stat. Region;30,2;30,6;29,8;38,2;33,1;43,5
+31.12.2018;3101;      Braunschweig, Kreisfreie Stadt;26,5;26,2;26,7;33,6;27,6;40
+31.12.2018;3102;      Salzgitter, Kreisfreie Stadt;35,1;35,6;34,7;39,8;33,9;46
+31.12.2018;3103;      Wolfsburg, Kreisfreie Stadt;30,6;30,9;30,4;37,3;31,6;43,3
+31.12.2018;3151;      Gifhorn, Landkreis;33,9;34,1;33,6;33,6;30,1;37,2
+31.12.2018;3152;      Göttingen, Landkreis;-;-;-;-;-;-
+31.12.2018;3153;      Goslar, Landkreis;27,4;27,6;27,2;47,9;40,6;55,7
+31.12.2018;3154;      Helmstedt, Landkreis;30,2;30,5;29,8;39,7;34,5;45,2
+31.12.2018;3155;      Northeim, Landkreis;30;30,6;29,4;44,2;38,9;49,6
+31.12.2018;3156;      Osterode am Harz, Landkreis;-;-;-;-;-;-
+31.12.2018;3157;      Peine, Landkreis;34;34,6;33,4;36,4;32;41
+31.12.2018;3158;      Wolfenbüttel, Landkreis;30,5;31,2;29,8;40,4;35,9;45,1
+31.12.2018;3159;      Göttingen, Landkreis;29,1;30;28,1;37,5;33,4;41,5
+31.12.2018;32;    Hannover, Stat. Region;31;31,6;30,3;37,5;32,5;42,6
+31.12.2018;3241;      Region Hannover, Landkreis;30,7;31,4;30;34,9;30;39,8
+31.12.2018;3241001;      Hannover, Landeshauptstadt;27,6;28,2;27;29,4;24,6;34,3
+31.12.2018;3251;      Diepholz, Landkreis;32,3;33,1;31,5;38,1;34;42,3
+31.12.2018;3252;      Hameln-Pyrmont, Landkreis;31,3;32,1;30,6;44,7;38,5;50,8
+31.12.2018;3254;      Hildesheim, Landkreis;30,1;30,9;29,4;39,6;34,5;44,7
+31.12.2018;3255;      Holzminden, Landkreis;30,7;31,1;30,2;46,6;40,7;52,7
+31.12.2018;3256;      Nienburg (Weser), Landkreis;32,5;32,1;33;37,8;32,5;43,5
+31.12.2018;3257;      Schaumburg, Landkreis;31,2;31,5;30,8;42,5;36,7;48,5
+31.12.2018;33;    Lüneburg, Stat. Region;32,9;33,8;32,1;39;34,8;43,3
+31.12.2018;3351;      Celle, Landkreis;33,9;34,6;33,3;40,8;36;45,7
+31.12.2018;3352;      Cuxhaven, Landkreis;32,6;33,8;31,3;44,8;40,7;49
+31.12.2018;3353;      Harburg, Landkreis;33,1;34;32,2;38,2;34,1;42,4
+31.12.2018;3354;      Lüchow-Dannenberg, Landkreis;31,4;32,8;30;50,6;45,9;55,3
+31.12.2018;3355;      Lüneburg, Landkreis;32,4;33,4;31,3;33,2;29,6;36,8
+31.12.2018;3356;      Osterholz, Landkreis;32,6;34,1;31,1;40,5;36,5;44,5
+31.12.2018;3357;      Rotenburg (Wümme), Landkreis;32,8;33,1;32,6;35,6;31,8;39,6
+31.12.2018;3358;      Heidekreis, Landkreis;32,6;33,4;31,8;38,3;33,6;43,2
+31.12.2018;3359;      Stade, Landkreis;33,9;34,5;33,3;36,5;32,3;40,8
+31.12.2018;3360;      Uelzen, Landkreis;30,2;31;29,3;44;38,9;49,2
+31.12.2018;3361;      Verden, Landkreis;34,1;34,7;33,6;38,5;34,8;42,1
+31.12.2018;34;    Weser-Ems, Stat. Region;33;33,5;32,4;34,5;30,4;38,8
+31.12.2018;3401;      Delmenhorst, Kreisfreie Stadt;33,7;34,9;32,5;37,6;33;42,2
+31.12.2018;3402;      Emden, Kreisfreie Stadt;31,8;32;31,5;35,5;30,3;41
+31.12.2018;3403;      Oldenburg (Oldenburg), Kreisfreie Stadt;27,9;29,2;26,6;29,9;26,7;33
+31.12.2018;3404;      Osnabrück, Kreisfreie Stadt;27,2;27,9;26,5;29;24,6;33,5
+31.12.2018;3405;      Wilhelmshaven, Kreisfreie Stadt;28,7;28,6;28,8;45,4;38,7;52,4
+31.12.2018;3451;      Ammerland, Landkreis;34,1;35,5;32,7;40,3;36,8;43,8
+31.12.2018;3452;      Aurich, Landkreis;32,4;33,6;31,2;39,1;35,2;43
+31.12.2018;3453;      Cloppenburg, Landkreis;37,8;37,6;38;27;23,2;31,1
+31.12.2018;3454;      Emsland, Landkreis;33,9;33,4;34,5;31,3;27,2;35,8
+31.12.2018;3455;      Friesland, Landkreis;32,3;34;30,7;46,8;42,9;50,6
+31.12.2018;3456;      Grafschaft Bentheim, Landkreis;34,6;35;34,2;34,8;30,9;38,9
+31.12.2018;3457;      Leer, Landkreis;33,3;33,5;33,2;36,1;32;40,4
+31.12.2018;3458;      Oldenburg, Landkreis;33,3;34,4;32,2;36;32,5;39,6
+31.12.2018;3459;      Osnabrück, Landkreis;34,1;34,6;33,6;35;30,4;39,7
+31.12.2018;3460;      Vechta, Landkreis;36,4;36,6;36,1;26,2;23,1;29,6
+31.12.2018;3461;      Wesermarsch, Landkreis;31,6;32;31,1;40,3;35,9;45
+31.12.2018;3462;      Wittmund, Landkreis;32,8;34;31,6;43,1;39,5;46,5
+31.12.2018;4;  Bremen;30,1;30,6;29,7;34,8;29,3;40,5
+31.12.2018;4011;      Bremen, Kreisfreie Stadt;29,5;30,1;28,9;34,3;29;39,8
+31.12.2018;4012;      Bremerhaven, Kreisfreie Stadt;33,3;33;33,7;37,1;30,7;43,9
+31.12.2018;5;  Nordrhein-Westfalen;31,3;32,2;30,5;34,9;30,1;39,7
+31.12.2018;51;    Düsseldorf, Regierungsbezirk;30,8;31,7;29,9;36;30,9;41,1
+31.12.2018;5111;      Düsseldorf, Kreisfreie Stadt;28,1;29,4;27;30,7;26,1;35,1
+31.12.2018;5112;      Duisburg, Kreisfreie Stadt;31,9;32,3;31,4;33,8;28,2;39,6
+31.12.2018;5113;      Essen, Kreisfreie Stadt;29,9;30,9;28,9;35,7;30,1;41,4
+31.12.2018;5114;      Krefeld, Kreisfreie Stadt;31,2;32,3;30,1;36,8;31,1;42,5
+31.12.2018;5116;      Mönchengladbach, Kreisfreie Stadt;30,8;31,6;30,1;34,5;29,8;39,3
+31.12.2018;5117;      Mülheim an der Ruhr, Kreisfreie Stadt;30,7;31,9;29,5;40,9;34,5;47,4
+31.12.2018;5119;      Oberhausen, Kreisfreie Stadt;29,7;30,1;29,3;36,2;30,8;41,8
+31.12.2018;5120;      Remscheid, Kreisfreie Stadt;32,1;32,1;32,1;37,6;31,6;43,9
+31.12.2018;5122;      Solingen, Kreisfreie Stadt;31,8;32,9;30,6;35,7;30,8;40,5
+31.12.2018;5124;      Wuppertal, Kreisfreie Stadt;32,2;32,7;31,8;34,7;29,1;40,5
+31.12.2018;5154;      Kleve, Kreis;31,1;31,5;30,5;34,1;29,9;38,6
+31.12.2018;5158;      Mettmann, Kreis;32,3;33,6;31;41,3;36,2;46,4
+31.12.2018;5162;      Rhein-Kreis Neuss;32,7;34,1;31,3;37,3;32,8;41,7
+31.12.2018;5166;      Viersen, Kreis;30,7;31,5;30;37,1;32,6;41,6
+31.12.2018;5170;      Wesel, Kreis;30;31,1;28,9;39,4;34,7;44,1
+31.12.2018;53;    Köln, Regierungsbezirk;30,9;32;29,9;32,9;28,8;37
+31.12.2018;5314;      Bonn, Kreisfreie Stadt;31,6;33,6;29,7;28,9;24,7;32,9
+31.12.2018;5315;      Köln, Kreisfreie Stadt;27,9;29;26,9;26,9;23,7;30
+31.12.2018;5316;      Leverkusen, Kreisfreie Stadt;32,4;33,8;31;36,6;31,2;42
+31.12.2018;5334;      Städteregion Aachen (einschl. Stadt Aachen);29,1;28,9;29,3;32,8;27,4;38,8
+31.12.2018;5334002;      Aachen, krfr. Stadt;25,5;24,4;26,9;28;21,8;35,6
+31.12.2018;5354;      Aachen, Kreis;-;-;-;-;-;-
+31.12.2018;5358;      Düren, Kreis;31,6;32,3;30,8;35,5;31,1;40
+31.12.2018;5362;      Rhein-Erft-Kreis;32,5;33,7;31,3;35,9;31,7;40,1
+31.12.2018;5366;      Euskirchen, Kreis;31,9;32,4;31,4;36,4;32,7;40
+31.12.2018;5370;      Heinsberg, Kreis;31,8;32,8;30,8;34,7;30,8;38,6
+31.12.2018;5374;      Oberbergischer Kreis;33,6;34,1;33,1;36,1;31,3;41
+31.12.2018;5378;      Rheinisch-Bergischer Kreis;32,8;34,5;31;40;35,5;44,3
+31.12.2018;5382;      Rhein-Sieg-Kreis;33,6;35,3;32;36,3;32,5;40
+31.12.2018;55;    Münster, Regierungsbezirk;32,1;32,9;31,3;34;29,3;38,7
+31.12.2018;5512;      Bottrop, Kreisfreie Stadt;29,5;30,5;28,5;37,3;31,4;43,1
+31.12.2018;5513;      Gelsenkirchen, Kreisfreie Stadt;33,2;33,8;32,6;34,6;28,8;40,7
+31.12.2018;5515;      Münster, Kreisfreie Stadt;26,5;27,9;25,3;26,1;22,8;29,3
+31.12.2018;5554;      Borken, Kreis;34,5;34,6;34,3;31,4;27,4;35,7
+31.12.2018;5558;      Coesfeld, Kreis;33,3;34,1;32,4;34,8;30,6;39,2
+31.12.2018;5562;      Recklinghausen, Kreis;30,8;31,9;29,7;38,6;33,3;43,9
+31.12.2018;5566;      Steinfurt, Kreis;34,4;35;33,8;33,2;28,7;37,7
+31.12.2018;5570;      Warendorf, Kreis;34,3;34,9;33,7;35,9;31;40,9
+31.12.2018;57;    Detmold, Regierungsbezirk;33,3;34;32,6;34,9;30;39,9
+31.12.2018;5711;      Bielefeld, Kreisfreie Stadt;32,1;33,3;30,9;32,8;28,2;37,2
+31.12.2018;5754;      Gütersloh, Kreis;33,8;34,1;33,5;32,4;27,8;37,3
+31.12.2018;5758;      Herford, Kreis;32,7;33,6;31,9;37,7;32,3;43,1
+31.12.2018;5762;      Höxter, Kreis;32,5;32,7;32,3;38,8;33,5;44,3
+31.12.2018;5766;      Lippe, Kreis;35;35,8;34,2;39,1;33,7;44,6
+31.12.2018;5770;      Minden-Lübbecke, Kreis;33,9;34,6;33,1;37,7;32,5;43,1
+31.12.2018;5774;      Paderborn, Kreis;32,5;32,7;32,2;29,1;25;33,4
+31.12.2018;59;    Arnsberg, Regierungsbezirk;30,8;31,4;30,1;36,4;31;42
+31.12.2018;5911;      Bochum, Kreisfreie Stadt;27,2;28;26,4;36;30;42,2
+31.12.2018;5913;      Dortmund, Kreisfreie Stadt;29,9;30,3;29,5;33,5;28,2;38,8
+31.12.2018;5914;      Hagen, Kreisfreie Stadt;33,4;34,2;32,6;38,1;31,8;44,6
+31.12.2018;5915;      Hamm, Kreisfreie Stadt;33,4;33,9;32,9;35,1;30;40,4
+31.12.2018;5916;      Herne, Kreisfreie Stadt;30,7;31;30,3;36,5;29,9;43,4
+31.12.2018;5954;      Ennepe-Ruhr-Kreis;29,4;30,5;28,3;40,1;34,7;45,5
+31.12.2018;5958;      Hochsauerlandkreis;31,5;31,6;31,4;37,1;31,7;42,9
+31.12.2018;5962;      Märkischer Kreis;32;32,7;31,3;37,3;32,1;42,6
+31.12.2018;5966;      Olpe, Kreis;32,4;33,1;31,6;33,4;29,2;37,8
+31.12.2018;5970;      Siegen-Wittgenstein, Kreis;30,6;31;30,2;35,7;30,7;41
+31.12.2018;5974;      Soest, Kreis;32,3;33;31,6;35,6;30,4;41,1
+31.12.2018;5978;      Unna, Kreis;31;32;30;38,6;33,2;44
+31.12.2018;6;  Hessen;31;31,7;30,4;34,1;29,9;38,3
+31.12.2018;64;    Darmstadt, Regierungsbezirk;31,4;32,2;30,6;32,6;28,7;36,6
+31.12.2018;6411;      Darmstadt, Kreisfreie Stadt;28,2;27,6;29;26,7;21,5;32,5
+31.12.2018;6412;      Frankfurt am Main, Kreisfreie Stadt;28,4;28,9;27,9;23,8;20,6;27
+31.12.2018;6413;      Offenbach am Main, Kreisfreie Stadt;32,5;32,7;32,4;26,1;22,4;29,9
+31.12.2018;6414;      Wiesbaden, Landeshauptstadt, Kreisfreie Stadt;33;35,1;31;33,2;29,4;36,8
+31.12.2018;6431;      Bergstraße, Landkreis;30,5;31,1;29,9;37,2;32,8;41,8
+31.12.2018;6432;      Darmstadt-Dieburg, Landkreis;32,1;32,6;31,6;34,6;31,1;38,2
+31.12.2018;6433;      Groß-Gerau, Landkreis;32,8;33,1;32,5;31,6;27,6;35,8
+31.12.2018;6434;      Hochtaunuskreis;34,9;36,7;33,1;39,3;34,9;43,6
+31.12.2018;6435;      Main-Kinzig-Kreis;31,6;32,4;30,8;36,1;31,9;40,3
+31.12.2018;6436;      Main-Taunus-Kreis;34,3;35,7;32,9;36;32;40
+31.12.2018;6437;      Odenwaldkreis;30,6;31;30,2;40,3;36,1;44,6
+31.12.2018;6438;      Offenbach, Landkreis;32,8;34;31,6;35,7;31,5;40
+31.12.2018;6439;      Rheingau-Taunus-Kreis;31,4;32,4;30,4;38,9;34,9;43
+31.12.2018;6440;      Wetteraukreis;31,6;32,4;30,8;35,2;31,3;39,3
+31.12.2018;65;    Gießen, Regierungsbezirk;30,2;30,7;29,7;34,5;30,4;38,6
+31.12.2018;6531;      Gießen, Landkreis;28,8;29,5;28,1;30,9;27,6;34,2
+31.12.2018;6532;      Lahn-Dill-Kreis;31,6;32,3;30,9;37,3;32,5;42,2
+31.12.2018;6533;      Limburg-Weilburg, Landkreis;31,7;32,1;31,2;36;31,6;40,4
+31.12.2018;6534;      Marburg-Biedenkopf, Landkreis;29,9;30,3;29,4;31,7;28;35,5
+31.12.2018;6535;      Vogelsbergkreis;29,1;29,1;29,1;41,5;36,6;46,7
+31.12.2018;66;    Kassel, Regierungsbezirk;30,6;31,1;30,1;38,5;33,5;43,8
+31.12.2018;6611;      Kassel, Kreisfreie Stadt;28,8;29,4;28,2;31,2;25,9;36,6
+31.12.2018;6631;      Fulda, Landkreis;32,2;32,4;31,9;35,3;30,5;40,2
+31.12.2018;6632;      Hersfeld-Rotenburg, Landkreis;31,2;31,4;30,9;41,4;36,2;46,9
+31.12.2018;6633;      Kassel, Landkreis;30,7;31,6;29,8;43,2;38,5;48
+31.12.2018;6634;      Schwalm-Eder-Kreis;30,2;30,3;30;39,4;34,3;44,9
+31.12.2018;6635;      Waldeck-Frankenberg, Landkreis;31,5;31,9;31,1;39,6;34,5;44,9
+31.12.2018;6636;      Werra-Meißner-Kreis;29,2;29,8;28,6;44,4;39;50
+31.12.2018;7;  Rheinland-Pfalz;30,5;31,1;29,8;36,2;31,8;40,7
+31.12.2018;71;    Koblenz, Stat. Region;30,8;31,3;30,2;38,3;33,7;43
+31.12.2018;7111;      Koblenz, Kreisfreie Stadt;27,1;27,8;26,5;35;29,3;40,9
+31.12.2018;7131;      Ahrweiler, Landkreis;30,1;30,7;29,4;42,2;37,3;47,3
+31.12.2018;7132;      Altenkirchen (Westerwald), Landkreis;31,3;31,8;30,9;37,7;32,6;43
+31.12.2018;7133;      Bad Kreuznach, Landkreis;31,4;32,5;30,3;39,8;35,6;44
+31.12.2018;7134;      Birkenfeld, Landkreis;29,9;30,3;29,4;41,6;36,5;46,9
+31.12.2018;7135;      Cochem-Zell, Landkreis;29,5;29,7;29,3;41,6;36,4;47,2
+31.12.2018;7137;      Mayen-Koblenz, Landkreis;31;31,4;30,5;36,7;32,6;41
+31.12.2018;7138;      Neuwied, Landkreis;32,5;33,2;31,8;38;33,7;42,3
+31.12.2018;7140;      Rhein-Hunsrück-Kreis;31;31,5;30,5;38,5;34;43,2
+31.12.2018;7141;      Rhein-Lahn-Kreis;30,5;30,8;30,2;39,9;35,6;44,3
+31.12.2018;7143;      Westerwaldkreis;31,7;32;31,3;35,2;30,9;39,6
+31.12.2018;72;    Trier, Stat. Region;29,8;30,2;29,3;34,3;30,1;38,7
+31.12.2018;7211;      Trier, Kreisfreie Stadt;25,3;26,2;24,4;27;22,1;32,1
+31.12.2018;7231;      Bernkastel-Wittlich, Landkreis;30,8;30,9;30,7;38,6;34,3;43,1
+31.12.2018;7232;      Eifelkreis Bitburg-Prüm;31,5;31,9;31,1;34,3;30,2;38,7
+31.12.2018;7233;      Vulkaneifel, Landkreis;29,7;29,7;29,7;41,4;37,3;45,8
+31.12.2018;7235;      Trier-Saarburg, Landkreis;31,6;32,1;31;34,3;30,5;38,1
+31.12.2018;73;    Rheinhessen-Pfalz, Stat. Region;30,4;31,2;29,6;35,3;31;39,6
+31.12.2018;7311;      Frankenthal (Pfalz), Kreisfreie Stadt;32,6;33,9;31,2;39,1;32,7;45,6
+31.12.2018;7312;      Kaiserslautern, Kreisfreie Stadt;26,8;26,3;27,4;32,3;25,9;39,4
+31.12.2018;7313;      Landau in der Pfalz, Kreisfreie Stadt;27,1;28,6;25,7;30,2;26,6;33,4
+31.12.2018;7314;      Ludwigshafen am Rhein, Kreisfreie Stadt;33,3;33,1;33,6;31;25,8;36,5
+31.12.2018;7315;      Mainz, Kreisfreie Stadt;25,5;26,9;24,2;26,7;23,4;29,9
+31.12.2018;7316;      Neustadt an der Weinstraße, Kreisfreie Stadt;30,8;31,3;30,4;42,1;36,1;48,3
+31.12.2018;7317;      Pirmasens, Kreisfreie Stadt;30,1;30,5;29,6;44,4;36,7;52,5
+31.12.2018;7318;      Speyer, Kreisfreie Stadt;30,7;31,9;29,6;38,3;32,1;44,5
+31.12.2018;7319;      Worms, Kreisfreie Stadt;32,4;32,6;32,1;34,1;28,6;39,8
+31.12.2018;7320;      Zweibrücken, Kreisfreie Stadt;29,8;29,5;30,2;39,1;32,9;45,7
+31.12.2018;7331;      Alzey-Worms, Landkreis;31,9;32,6;31,3;33,1;30;36,2
+31.12.2018;7332;      Bad Dürkheim, Landkreis;30;31,2;28,8;41,4;37,3;45,5
+31.12.2018;7333;      Donnersbergkreis;31,7;32,2;31,2;36,6;33;40,3
+31.12.2018;7334;      Germersheim, Landkreis;31,1;32;30,2;32,5;28,8;36,2
+31.12.2018;7335;      Kaiserslautern, Landkreis;33,1;34,4;31,9;36,7;32,9;40,4
+31.12.2018;7336;      Kusel, Landkreis;29,3;30;28,7;40,7;36,5;45
+31.12.2018;7337;      Südliche Weinstraße, Landkreis;30,2;31,5;28,9;39,3;35,5;43,1
+31.12.2018;7338;      Rhein-Pfalz-Kreis;31,7;32,7;30,6;38,6;34,6;42,7
+31.12.2018;7339;      Mainz-Bingen, Landkreis;32,5;33,7;31,3;34,6;31,5;37,6
+31.12.2018;7340;      Südwestpfalz, Landkreis;27,4;28,1;26,6;42,7;38,7;46,8
+31.12.2018;8;  Baden-Württemberg, Land;31,4;31,7;31;33,2;28,7;37,8
+31.12.2018;81;    Stuttgart, Regierungsbezirk;31,4;31,5;31,3;32,7;28,2;37,5
+31.12.2018;8111;      Stuttgart, Landeshauptstadt, Stadtkreis;26,6;26,7;26,6;27,5;23,1;32,1
+31.12.2018;8115;      Böblingen, Landkreis;33,2;33,7;32,8;33;29;37,3
+31.12.2018;8116;      Esslingen, Landkreis;31,3;31,4;31,3;33,7;29;38,8
+31.12.2018;8117;      Göppingen, Landkreis;32,2;32,2;32,3;36,3;31,4;41,5
+31.12.2018;8118;      Ludwigsburg, Landkreis;32,5;32,9;32,1;32,7;28,3;37,2
+31.12.2018;8119;      Rems-Murr-Kreis, Landkreis;32,3;32,8;31,8;35,2;30,7;39,9
+31.12.2018;8121;      Heilbronn, Stadtkreis;32;31,4;32,6;31,9;25,6;38,9
+31.12.2018;8125;      Heilbronn, Landkreis;32,3;32,2;32,5;31,5;27,4;35,7
+31.12.2018;8126;      Hohenlohekreis, Landkreis;32,2;32,1;32,3;31,9;27,6;36,6
+31.12.2018;8127;      Schwäbisch Hall, Landkreis;33;32,9;33;31,6;27,3;36,2
+31.12.2018;8128;      Main-Tauber-Kreis, Landkreis;31,4;31,6;31,2;38,2;33,5;43,2
+31.12.2018;8135;      Heidenheim, Landkreis;33;33,1;33;37,2;31,7;43
+31.12.2018;8136;      Ostalbkreis, Landkreis;32,6;32,5;32,6;34,3;29,6;39,3
+31.12.2018;82;    Karlsruhe, Regierungsbezirk;30;30,5;29,6;33,3;28,6;38,2
+31.12.2018;8211;      Baden-Baden, Stadtkreis;28,5;30;27;45,4;38,6;52
+31.12.2018;8212;      Karlsruhe, Stadtkreis;25,5;25,2;25,8;28,3;22,6;34,6
+31.12.2018;8215;      Karlsruhe, Landkreis;31,1;31,5;30,7;35,1;30,4;39,9
+31.12.2018;8216;      Rastatt, Landkreis;30,9;31,2;30,5;36;31,3;40,9
+31.12.2018;8221;      Heidelberg, Stadtkreis;24,8;25,8;23,8;24,4;21,2;27,5
+31.12.2018;8222;      Mannheim, Stadtkreis;27,4;27,7;27,1;28,8;23,9;33,9
+31.12.2018;8225;      Neckar-Odenwald-Kreis, Landkreis;31,2;31,2;31,1;36,1;31,5;40,9
+31.12.2018;8226;      Rhein-Neckar-Kreis, Landkreis;31,8;32,8;30,7;36;31,8;40,3
+31.12.2018;8231;      Pforzheim, Stadtkreis;33,4;33,6;33,2;33,5;27,2;40,1
+31.12.2018;8235;      Calw, Landkreis;32,7;33,2;32,2;34,9;30,5;39,5
+31.12.2018;8236;      Enzkreis, Landkreis;32,7;33,3;32,1;35,6;31,1;40,3
+31.12.2018;8237;      Freudenstadt, Landkreis;32,5;32,8;32,3;34,2;29,7;39
+31.12.2018;83;    Freiburg, Regierungsbezirk;32,3;32,8;31,7;34,2;30;38,4
+31.12.2018;8311;      Freiburg im Breisgau, Stadtkreis;27,9;29,2;26,7;25,3;22,1;28,2
+31.12.2018;8315;      Breisgau-Hochschwarzwald, Landkreis;33,4;34,4;32,4;37,2;33,3;41,1
+31.12.2018;8316;      Emmendingen, Landkreis;32,7;33,7;31,7;35,1;31;39,3
+31.12.2018;8317;      Ortenaukreis, Landkreis;32,6;32,7;32,4;34,9;30,3;39,7
+31.12.2018;8325;      Rottweil, Landkreis;33,5;33,8;33,1;35,6;30,9;40,5
+31.12.2018;8326;      Schwarzwald-Baar-Kreis, Landkreis;31,8;31,7;31,9;37,6;32,2;43,3
+31.12.2018;8327;      Tuttlingen, Landkreis;35,1;34,8;35,4;32,9;28,4;37,7
+31.12.2018;8335;      Konstanz, Landkreis;31,1;31,8;30,4;34,5;30,3;38,6
+31.12.2018;8336;      Lörrach, Landkreis;32,9;33,7;32,1;33,8;29,9;37,8
+31.12.2018;8337;      Waldshut, Landkreis;34;34,7;33,4;36;32,1;40
+31.12.2018;84;    Tübingen, Regierungsbezirk;32,4;32,8;32;32,9;28,8;37,1
+31.12.2018;8415;      Reutlingen, Landkreis;32,5;33,1;31,9;34,1;29,6;38,8
+31.12.2018;8416;      Tübingen, Landkreis;30,6;31,4;29,9;27,2;24,4;29,9
+31.12.2018;8417;      Zollernalbkreis, Landkreis;31,1;31,2;30,9;37,1;31,8;42,6
+31.12.2018;8421;      Ulm, Stadtkreis;29,5;29,8;29,1;29,1;24,5;33,9
+31.12.2018;8425;      Alb-Donau-Kreis, Landkreis;34,1;33,9;34,2;31,9;27,9;36,2
+31.12.2018;8426;      Biberach, Landkreis;34,5;34,5;34,5;30,7;27,2;34,4
+31.12.2018;8435;      Bodenseekreis, Landkreis;32,5;33,3;31,6;38,7;34,7;42,7
+31.12.2018;8436;      Ravensburg, Landkreis;33,2;33,7;32,6;32,8;29;36,8
+31.12.2018;8437;      Sigmaringen, Landkreis;32,9;32,9;32,8;33,8;29,3;38,6
+31.12.2018;9;  Bayern;30,2;30,6;29,9;33,3;28,9;37,8
+31.12.2018;91;    Oberbayern, Regierungsbezirk;30,6;31;30,1;31,5;27,4;35,7
+31.12.2018;9161;      Ingolstadt;29,7;29,7;29,8;29,2;24,2;34,5
+31.12.2018;9162;      München, Landeshauptstadt;27;27,7;26,2;27,2;23,4;30,9
+31.12.2018;9163;      Rosenheim;29,9;30,2;29,5;32,7;26,9;38,8
+31.12.2018;9171;      Altötting, Landkreis;32;31,9;32,1;36,7;31,1;42,6
+31.12.2018;9172;      Berchtesgadener Land, Landkreis;29,7;30;29,3;40,2;34,1;46,5
+31.12.2018;9173;      Bad Tölz-Wolfratshausen, Landkreis;32,7;33,5;31,9;36;31,7;40,4
+31.12.2018;9174;      Dachau, Landkreis;31,7;31,9;31,5;29,8;26;33,8
+31.12.2018;9175;      Ebersberg, Landkreis;34,5;35,1;33,9;30,9;27,2;34,7
+31.12.2018;9176;      Eichstätt, Landkreis;33,9;33,4;34,3;28,5;25,1;32,2
+31.12.2018;9177;      Erding, Landkreis;32,1;32,2;32;26,9;23,7;30,2
+31.12.2018;9178;      Freising, Landkreis;30,5;30,2;30,9;24,4;21,2;28
+31.12.2018;9179;      Fürstenfeldbruck, Landkreis;33,5;34;32,9;36,6;31,9;41,4
+31.12.2018;9180;      Garmisch-Partenkirchen, Landkreis;29,9;31,2;28,7;43,5;37,8;49,1
+31.12.2018;9181;      Landsberg am Lech, Landkreis;33,1;33,1;33;33,2;29,5;37
+31.12.2018;9182;      Miesbach, Landkreis;31,3;32,2;30,4;38,4;33,3;43,5
+31.12.2018;9183;      Mühldorf a.Inn, Landkreis;31,6;31,4;31,9;32,7;27,9;37,9
+31.12.2018;9184;      München, Landkreis;34,1;34,4;33,7;34,4;29,9;39,1
+31.12.2018;9185;      Neuburg-Schrobenhausen, Landkreis;32,5;32,2;32,8;31,1;27,1;35,4
+31.12.2018;9186;      Pfaffenhofen a.d.Ilm, Landkreis;31,4;30,8;32,1;29,2;25,5;33,2
+31.12.2018;9187;      Rosenheim, Landkreis;32,3;33,2;31,5;35,8;31,8;39,9
+31.12.2018;9188;      Starnberg, Landkreis;35,4;36,9;33,9;40,2;36,3;44
+31.12.2018;9189;      Traunstein, Landkreis;31,1;31,3;30,8;38,4;33,7;43,3
+31.12.2018;9190;      Weilheim-Schongau, Landkreis;32,8;33,4;32,3;36,5;32,9;40,2
+31.12.2018;92;    Niederbayern, Regierungsbezirk;30;30;30;33,4;28,8;38,2
+31.12.2018;9261;      Landshut;28,1;28,5;27,7;32,9;27,2;38,7
+31.12.2018;9262;      Passau;23,9;23,5;24,2;33,7;27,6;39,9
+31.12.2018;9263;      Straubing;26,5;26,3;26,8;34,2;27,6;41,5
+31.12.2018;9271;      Deggendorf, Landkreis;29,4;29,6;29,3;33;28,5;37,8
+31.12.2018;9272;      Freyung-Grafenau, Landkreis;28,6;29;28,1;35,6;31,8;39,5
+31.12.2018;9273;      Kelheim, Landkreis;32,3;31,8;33;30,2;25,9;34,9
+31.12.2018;9274;      Landshut, Landkreis;32,4;32,2;32,7;30,3;26,7;34,2
+31.12.2018;9275;      Passau, Landkreis;29,9;30,3;29,5;36,6;32;41,5
+31.12.2018;9276;      Regen, Landkreis;29,3;29,7;28,9;37;32;42,2
+31.12.2018;9277;      Rottal-Inn, Landkreis;30,6;30,6;30,7;35,4;30,7;40,4
+31.12.2018;9278;      Straubing-Bogen, Landkreis;31,6;31,7;31,5;32;28;36,2
+31.12.2018;9279;      Dingolfing-Landau, Landkreis;29,9;29,1;30,7;30,5;26,3;35,3
+31.12.2018;93;    Oberpfalz, Regierungsbezirk;29,3;29,4;29,2;32,7;28,3;37,3
+31.12.2018;9361;      Amberg;28,6;28,5;28,7;39,4;31,5;47,8
+31.12.2018;9362;      Regensburg;24,6;25,2;23,9;25,7;21,4;30
+31.12.2018;9363;      Weiden i.d.OPf.;28,4;28,9;27,8;38,8;32;45,6
+31.12.2018;9371;      Amberg-Sulzbach, Landkreis;29,7;29,7;29,7;34,5;30,2;39,2
+31.12.2018;9372;      Cham, Landkreis;29,5;29,4;29,7;34,9;30,6;39,4
+31.12.2018;9373;      Neumarkt i.d.OPf., Landkreis;31,2;30,9;31,4;30,8;26,8;35,2
+31.12.2018;9374;      Neustadt a.d.Waldnaab, Landkreis;30;30,2;29,7;34,4;30,3;38,8
+31.12.2018;9375;      Regensburg, Landkreis;31,6;31,8;31,3;31,5;28,1;35
+31.12.2018;9376;      Schwandorf, Landkreis;29,6;29,5;29,8;33,5;28,6;38,8
+31.12.2018;9377;      Tirschenreuth, Landkreis;28,7;28,6;28,9;37,8;32,6;43,3
+31.12.2018;94;    Oberfranken, Regierungsbezirk;28,8;29,2;28,5;37,1;31,9;42,5
+31.12.2018;9461;      Bamberg;25,6;26,5;24,7;29,7;24,6;34,7
+31.12.2018;9462;      Bayreuth;24,7;25,2;24,3;34;27,9;40,3
+31.12.2018;9463;      Coburg;26,9;27;26,7;38,9;32,3;45,8
+31.12.2018;9464;      Hof;30,6;31;30,1;41,1;32,8;49,5
+31.12.2018;9471;      Bamberg, Landkreis;31,1;31,1;31,1;30,8;27,4;34,3
+31.12.2018;9472;      Bayreuth, Landkreis;30,1;30,6;29,5;37,5;33,1;42,1
+31.12.2018;9473;      Coburg, Landkreis;29,6;30,3;28,9;38,8;33,8;44
+31.12.2018;9474;      Forchheim, Landkreis;31,1;31;31,2;33,2;29,5;37,1
+31.12.2018;9475;      Hof, Landkreis;28,6;28,8;28,4;44,5;38,2;51
+31.12.2018;9476;      Kronach, Landkreis;26,9;26,8;26,9;40,4;34,4;46,8
+31.12.2018;9477;      Kulmbach, Landkreis;28;28,6;27,3;40,6;34,8;46,6
+31.12.2018;9478;      Lichtenfels, Landkreis;28,8;28,8;28,8;37,5;32,7;42,5
+31.12.2018;9479;      Wunsiedel i.Fichtelgebirge, Landkreis;28,8;29,7;27,9;46,1;38,8;53,7
+31.12.2018;95;    Mittelfranken, Regierungsbezirk;30,3;31;29,5;33,5;29;38,1
+31.12.2018;9561;      Ansbach;31;32;30,1;35,3;30;40,4
+31.12.2018;9562;      Erlangen;27,8;28;27,7;27,4;22,8;32,3
+31.12.2018;9563;      Fürth;28,6;29,8;27,5;28,8;24,2;33,5
+31.12.2018;9564;      Nürnberg;28,7;29,5;27,9;32,3;27;37,6
+31.12.2018;9565;      Schwabach;32,2;33;31,3;36,9;31,2;42,6
+31.12.2018;9571;      Ansbach, Landkreis;31,7;32;31,4;33;29;37,3
+31.12.2018;9572;      Erlangen-Höchstadt, Landkreis;33;33,7;32,2;34,1;31,3;36,8
+31.12.2018;9573;      Fürth, Landkreis;31,1;31,9;30,4;38,8;34,5;42,9
+31.12.2018;9574;      Nürnberger Land, Landkreis;31;32,1;29,8;37,5;33,2;41,9
+31.12.2018;9575;      Neustadt a.d.Aisch-Bad Windsheim, Landkreis;31,3;31,9;30,7;34,6;30,8;38,6
+31.12.2018;9576;      Roth, Landkreis;31,4;31,9;30,9;34,5;30,5;38,6
+31.12.2018;9577;      Weißenburg-Gunzenhausen, Landkreis;31,8;31,9;31,6;36,6;31,5;42,1
+31.12.2018;96;    Unterfranken, Regierungsbezirk;29,6;30;29,2;35,8;31,6;40,1
+31.12.2018;9661;      Aschaffenburg;29,1;30;28,2;33,9;28,6;39,2
+31.12.2018;9662;      Schweinfurt;31,8;32,4;31,3;40,4;32,6;48,7
+31.12.2018;9663;      Würzburg;22,4;22,7;22,2;30,5;25;35,9
+31.12.2018;9671;      Aschaffenburg, Landkreis;30,3;30,7;29,8;35,6;32,2;39
+31.12.2018;9672;      Bad Kissingen, Landkreis;29,8;29,8;29,9;41,9;36,8;47,2
+31.12.2018;9673;      Rhön-Grabfeld, Landkreis;31,2;31,5;30,9;37,3;33,4;41,3
+31.12.2018;9674;      Haßberge, Landkreis;30,7;30,9;30,5;34,2;30,6;38
+31.12.2018;9675;      Kitzingen, Landkreis;30,3;30,4;30,1;33,9;30,4;37,6
+31.12.2018;9676;      Miltenberg, Landkreis;31;31,5;30,4;35,4;31,7;39,2
+31.12.2018;9677;      Main-Spessart, Landkreis;29,3;29,1;29,4;38,3;33,9;43
+31.12.2018;9678;      Schweinfurt, Landkreis;30,6;31,1;30,1;36,2;32,5;40,1
+31.12.2018;9679;      Würzburg, Landkreis;31,2;31,9;30,4;35,4;32,4;38,5
+31.12.2018;97;    Schwaben, Regierungsbezirk;31,4;31,7;31,2;34,1;29,7;38,7
+31.12.2018;9761;      Augsburg;27,5;27,5;27,4;30,7;25,1;36,5
+31.12.2018;9762;      Kaufbeuren;31,6;31,8;31,4;39;33,3;45
+31.12.2018;9763;      Kempten (Allgäu);29,3;29,6;29;36,8;30,9;43
+31.12.2018;9764;      Memmingen;31,5;31;32;36,2;30,1;42,8
+31.12.2018;9771;      Aichach-Friedberg, Landkreis;33,6;33,7;33,5;33;29,5;36,7
+31.12.2018;9772;      Augsburg, Landkreis;33;33,7;32,4;34,3;30,3;38,4
+31.12.2018;9773;      Dillingen a.d.Donau, Landkreis;32,1;32,1;32,1;33,3;29,1;37,8
+31.12.2018;9774;      Günzburg, Landkreis;31,7;32,1;31,4;31,7;28;35,5
+31.12.2018;9775;      Neu-Ulm, Landkreis;31,7;31,9;31,5;33,3;29,2;37,6
+31.12.2018;9776;      Lindau (Bodensee), Landkreis;31,9;33,1;30,8;38,5;34,2;42,9
+31.12.2018;9777;      Ostallgäu, Landkreis;33,4;33,6;33,2;35,7;32,3;39,2
+31.12.2018;9778;      Unterallgäu, Landkreis;32,6;32,3;32,9;35,3;30,8;40,2
+31.12.2018;9779;      Donau-Ries, Landkreis;32,1;31,8;32,5;32,7;28,2;37,6
+31.12.2018;9780;      Oberallgäu, Landkreis;31,3;32,1;30,5;38,5;34,6;42,3
+31.12.2018;10;  Saarland;27,9;28,7;27,2;39,8;34,5;45,3
+31.12.2018;10041;      Saarbrücken, Regionalverband;27,9;28,6;27,2;38,1;32,3;44
+31.12.2018;10041100;      Saarbrücken, Landeshauptstadt;26,8;27,1;26,6;34,4;28,8;40,3
+31.12.2018;10042;      Merzig-Wadern, Landkreis;28,6;29,6;27,6;37,7;32,8;42,7
+31.12.2018;10043;      Neunkirchen, Landkreis;27,6;28,4;26,8;41,1;35,4;47
+31.12.2018;10044;      Saarlouis, Landkreis;28,4;29,1;27,7;40,4;35,1;45,8
+31.12.2018;10045;      Saarpfalz-Kreis;28,1;29,2;27;42,7;37,6;47,7
+31.12.2018;10046;      St. Wendel, Landkreis;26,6;26,7;26,4;41,4;37;45,9
+31.12.2018;11;  Berlin;28,9;29,4;28,3;30,6;26,1;35,2
+31.12.2018;11001001;      Berlin-Mitte;.;.;.;.;.;.
+31.12.2018;11002002;      Berlin-Friedrichshain-Kreuzberg;.;.;.;.;.;.
+31.12.2018;11003003;      Berlin-Pankow;.;.;.;.;.;.
+31.12.2018;11004004;      Berlin-Charlottenburg-Wilmersdorf;.;.;.;.;.;.
+31.12.2018;11005005;      Berlin-Spandau;.;.;.;.;.;.
+31.12.2018;11006006;      Berlin-Steglitz-Zehlendorf;.;.;.;.;.;.
+31.12.2018;11007007;      Berlin-Tempelhof-Schöneberg;.;.;.;.;.;.
+31.12.2018;11008008;      Berlin-Neukölln;.;.;.;.;.;.
+31.12.2018;11009009;      Berlin-Treptow-Köpenick;.;.;.;.;.;.
+31.12.2018;11010010;      Berlin-Marzahn-Hellersdorf;.;.;.;.;.;.
+31.12.2018;11011011;      Berlin-Lichtenberg;.;.;.;.;.;.
+31.12.2018;11012012;      Berlin-Reinickendorf;.;.;.;.;.;.
+31.12.2018;12;  Brandenburg;29,7;30;29,3;42;36;48,3
+31.12.2018;12051;      Brandenburg an der Havel, Kreisfreie Stadt;27,3;26,5;28,3;48,4;39,5;58,1
+31.12.2018;12052;      Cottbus, Kreisfreie Stadt;27,7;27,7;27,6;43,4;35,5;51,8
+31.12.2018;12053;      Frankfurt (Oder), Kreisfreie Stadt;27,8;28,2;27,5;44,4;37,1;51,8
+31.12.2018;12054;      Potsdam, Kreisfreie Stadt;31,8;33,2;30,5;32,3;27,5;37
+31.12.2018;12060;      Barnim, Landkreis;30,2;31;29,3;40,3;35,6;45,1
+31.12.2018;12061;      Dahme-Spreewald, Landkreis;29,9;30,1;29,7;41,1;35,8;46,8
+31.12.2018;12062;      Elbe-Elster, Landkreis;27,3;26,8;27,8;49,4;40,9;58,7
+31.12.2018;12063;      Havelland, Landkreis;31,3;31,8;30,8;37,9;33;43
+31.12.2018;12064;      Märkisch-Oderland, Landkreis;29,6;30,2;28,9;40,6;35,5;45,9
+31.12.2018;12065;      Oberhavel, Landkreis;31;31,5;30,5;38,8;33,8;43,9
+31.12.2018;12066;      Oberspreewald-Lausitz, Landkreis;27,3;27,1;27,6;51,1;40,8;62,3
+31.12.2018;12067;      Oder-Spree, Landkreis;29,4;29,8;28,9;46,4;40,3;52,8
+31.12.2018;12068;      Ostprignitz-Ruppin, Landkreis;28,2;28,8;27,6;43,6;37,4;50,1
+31.12.2018;12069;      Potsdam-Mittelmark, Landkreis;32,5;32,8;32,2;38,3;34;42,7
+31.12.2018;12070;      Prignitz, Landkreis;27;26,8;27,2;49,6;40,9;59,2
+31.12.2018;12071;      Spree-Neiße, Landkreis;27,3;27,4;27,2;49;41,3;57,2
+31.12.2018;12072;      Teltow-Fläming, Landkreis;30,3;30,3;30,4;37,8;31,9;44
+31.12.2018;12073;      Uckermark, Landkreis;28,2;28,7;27,7;48,8;41,5;56,4
+31.12.2018;13;  Mecklenburg-Vorpommern;28,8;28,8;28,8;42,2;35,4;49,3
+31.12.2018;13001;      Kreisfreie Stadt Greifswald, Hansestadt;-;-;-;-;-;-
+31.12.2018;13002;      Kreisfreie Stadt Neubrandenburg, Stadt;-;-;-;-;-;-
+31.12.2018;13003;      Kreisfreie Stadt Rostock, Hansestadt;26,9;26,1;27,6;39,7;31,5;48,6
+31.12.2018;13004;      Kreisfreie Stadt Schwerin, Landeshauptstadt;31,2;31,7;30,7;45;36,6;53,6
+31.12.2018;13005;      Kreisfreie Stadt Stralsund, Hansestadt;-;-;-;-;-;-
+31.12.2018;13006;      Kreisfreie Stadt Wismar, Hansestadt;-;-;-;-;-;-
+31.12.2018;13051;      Landkreis Bad Doberan;-;-;-;-;-;-
+31.12.2018;13052;      Landkreis Demmin;-;-;-;-;-;-
+31.12.2018;13053;      Landkreis Güstrow;-;-;-;-;-;-
+31.12.2018;13054;      Landkreis Ludwigslust;-;-;-;-;-;-
+31.12.2018;13055;      Landkreis Mecklenburg-Strelitz;-;-;-;-;-;-
+31.12.2018;13056;      Landkreis Müritz;-;-;-;-;-;-
+31.12.2018;13057;      Landkreis Nordvorpommern;-;-;-;-;-;-
+31.12.2018;13058;      Landkreis Nordwestmecklenburg;-;-;-;-;-;-
+31.12.2018;13059;      Landkreis Ostvorpommern;-;-;-;-;-;-
+31.12.2018;13060;      Landkreis Parchim;-;-;-;-;-;-
+31.12.2018;13061;      Landkreis Rügen;-;-;-;-;-;-
+31.12.2018;13062;      Landkreis Uecker-Randow;-;-;-;-;-;-
+31.12.2018;13071;      Landkreis Mecklenburgische Seenplatte;28,9;29,2;28,6;44,6;37,2;52,4
+31.12.2018;13072;      Landkreis Rostock;30,6;30,7;30,4;40,7;35,2;46,6
+31.12.2018;13073;      Landkreis Vorpommern-Rügen;27,9;28;27,8;44,9;38,1;52,1
+31.12.2018;13074;      Landkreis Nordwestmecklenburg;29,6;29,7;29,5;39,8;33,7;46,3
+31.12.2018;13075;      Landkreis Vorpommern-Greifswald;28,1;28,4;27,9;42,8;36,6;49,3
+31.12.2018;13076;      Landkreis Ludwigslust-Parchim;28,6;28,3;29;40;33,7;46,7
+31.12.2018;14;  Sachsen;30,7;30,6;30,8;46,3;38,1;55
+31.12.2018;141;    Chemnitz, Regierungsbezirk;-;-;-;-;-;-
+31.12.2018;14161;      Chemnitz, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14166;      Plauen, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14167;      Zwickau, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14171;      Annaberg, Landkreis;-;-;-;-;-;-
+31.12.2018;14173;      Chemnitzer Land, Landkreis;-;-;-;-;-;-
+31.12.2018;14177;      Freiberg, Landkreis;-;-;-;-;-;-
+31.12.2018;14178;      Vogtlandkreis;-;-;-;-;-;-
+31.12.2018;14181;      Mittlerer Erzgebirgskreis;-;-;-;-;-;-
+31.12.2018;14182;      Mittweida, Landkreis;-;-;-;-;-;-
+31.12.2018;14188;      Stollberg, Landkreis;-;-;-;-;-;-
+31.12.2018;14191;      Aue-Schwarzenberg, Landkreis;-;-;-;-;-;-
+31.12.2018;14193;      Zwickauer Land, Landkreis;-;-;-;-;-;-
+31.12.2018;142;    Dresden, Regierungsbezirk;-;-;-;-;-;-
+31.12.2018;14262;      Dresden, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14263;      Görlitz, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14264;      Hoyerswerda, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14272;      Bautzen, Landkreis;-;-;-;-;-;-
+31.12.2018;14280;      Meißen, Landkreis;-;-;-;-;-;-
+31.12.2018;14284;      Niederschlesischer Oberlausitzkreis;-;-;-;-;-;-
+31.12.2018;14285;      Riesa-Großenhain, Landkreis;-;-;-;-;-;-
+31.12.2018;14286;      Löbau-Zittau, Landkreis;-;-;-;-;-;-
+31.12.2018;14287;      Sächsische Schweiz, Landkreis;-;-;-;-;-;-
+31.12.2018;14290;      Weißeritzkreis;-;-;-;-;-;-
+31.12.2018;14292;      Kamenz, Landkreis;-;-;-;-;-;-
+31.12.2018;143;    Leipzig, Regierungsbezirk;-;-;-;-;-;-
+31.12.2018;14365;      Leipzig, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;14374;      Delitzsch, Landkreis;-;-;-;-;-;-
+31.12.2018;14375;      Döbeln, Landkreis;-;-;-;-;-;-
+31.12.2018;14379;      Leipziger Land, Landkreis;-;-;-;-;-;-
+31.12.2018;14383;      Muldentalkreis;-;-;-;-;-;-
+31.12.2018;14389;      Torgau-Oschatz, Landkreis;-;-;-;-;-;-
+31.12.2018;145;    Chemnitz, Stat. Region;30,2;30,1;30,4;52,9;43,3;63,2
+31.12.2018;14511;      Chemnitz, Stadt;30,1;29,5;30,9;50;40;61,2
+31.12.2018;14521;      Erzgebirgskreis;31,3;31,4;31,3;54,7;45,7;64,3
+31.12.2018;14522;      Mittelsachsen, Landkreis;30,2;29,7;30,6;50,7;41,8;60,5
+31.12.2018;14523;      Vogtlandkreis;29,3;29,7;28,9;55,3;45,1;66,1
+31.12.2018;14524;      Zwickau, Landkreis;29,9;29,8;29,9;53,5;43,7;64
+31.12.2018;146;    Dresden, Stat. Region;31,8;31,6;32,1;45,9;38;54,4
+31.12.2018;14612;      Dresden, Stadt;31,7;31,3;32,1;36,8;29,8;44,5
+31.12.2018;14625;      Bautzen, Landkreis;31,8;31,6;31,9;49,6;41,5;58,4
+31.12.2018;14626;      Görlitz, Landkreis;30,6;30,2;31;54,7;45,7;64,4
+31.12.2018;14627;      Meißen, Landkreis;32;31,7;32,3;49,9;41,4;59
+31.12.2018;14628;      Sächsische Schweiz-Osterzgebirge, Landkreis;33,4;33,7;33;50,4;42,6;58,7
+31.12.2018;147;    Leipzig, Stat. Region;29,7;29,7;29,6;38,5;31,8;45,6
+31.12.2018;14713;      Leipzig, Stadt;29;29;29,1;33,2;27;39,6
+31.12.2018;14729;      Leipzig, Landkreis;31,1;31,4;30,7;47,1;39,6;54,8
+31.12.2018;14730;      Nordsachsen, Landkreis;29,9;29,7;30;44,7;37;53,1
+31.12.2018;15;  Sachsen-Anhalt;28,3;28,5;28,2;46,2;38;55
+31.12.2018;15001;      Dessau-Roßlau, Kreisfreie Stadt;27,4;28,3;26,4;58,3;48,8;68
+31.12.2018;15002;      Halle (Saale), Kreisfreie Stadt;30,8;31,3;30,3;41,6;33,9;49,5
+31.12.2018;15003;      Magdeburg, Kreisfreie Stadt;28,9;28,9;28,9;41,3;32,6;50,6
+31.12.2018;15081;      Altmarkkreis Salzwedel;29,1;28,9;29,4;41,1;33,5;49,5
+31.12.2018;15082;      Anhalt-Bitterfeld, Landkreis;26,9;27;26,9;48,8;40;58,1
+31.12.2018;15083;      Börde, Landkreis;28,9;28,8;28,9;39,9;33,7;46,6
+31.12.2018;15084;      Burgenlandkreis;27,4;27,4;27,4;49,2;39,8;59,5
+31.12.2018;15085;      Harz, Landkreis;27,6;28;27,1;49,8;41,2;59
+31.12.2018;15086;      Jerichower Land, Landkreis;28,4;28;28,8;44,6;37;52,8
+31.12.2018;15087;      Mansfeld-Südharz, Landkreis;27,2;27,1;27,2;53,1;43,9;62,9
+31.12.2018;15088;      Saalekreis;29;29,1;28,9;44,4;37,7;51,5
+31.12.2018;15089;      Salzlandkreis;27,6;27,7;27,5;49,3;40,2;59
+31.12.2018;15090;      Stendal, Landkreis;28,4;28,4;28,5;43,9;36,7;51,5
+31.12.2018;15091;      Wittenberg, Landkreis;27,4;27,6;27,1;50,8;42,2;60,1
+31.12.2018;151;    Dessau, Stat. Region;-;-;-;-;-;-
+31.12.2018;15101;      Dessau, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;15151;      Anhalt-Zerbst, Kreis;-;-;-;-;-;-
+31.12.2018;15153;      Bernburg, Kreis;-;-;-;-;-;-
+31.12.2018;15154;      Bitterfeld, Kreis;-;-;-;-;-;-
+31.12.2018;15159;      Köthen, Kreis;-;-;-;-;-;-
+31.12.2018;15171;      Wittenberg, Kreis;-;-;-;-;-;-
+31.12.2018;152;    Halle, Stat. Region;-;-;-;-;-;-
+31.12.2018;15202;      Halle (Saale), Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;15256;      Burgenlandkreis;-;-;-;-;-;-
+31.12.2018;15260;      Mansfelder Land, Kreis;-;-;-;-;-;-
+31.12.2018;15261;      Merseburg-Querfurt, Kreis;-;-;-;-;-;-
+31.12.2018;15265;      Saalkreis;-;-;-;-;-;-
+31.12.2018;15266;      Sangerhausen, Kreis;-;-;-;-;-;-
+31.12.2018;15268;      Weißenfels, Kreis;-;-;-;-;-;-
+31.12.2018;153;    Magdeburg, Stat. Region;-;-;-;-;-;-
+31.12.2018;15303;      Magdeburg, Kreisfreie Stadt;-;-;-;-;-;-
+31.12.2018;15352;      Aschersleben-Staßfurt, Kreis;-;-;-;-;-;-
+31.12.2018;15355;      Bördekreis;-;-;-;-;-;-
+31.12.2018;15357;      Halberstadt, Kreis;-;-;-;-;-;-
+31.12.2018;15358;      Jerichower Land, Kreis;-;-;-;-;-;-
+31.12.2018;15362;      Ohrekreis;-;-;-;-;-;-
+31.12.2018;15363;      Stendal, Kreis;-;-;-;-;-;-
+31.12.2018;15364;      Quedlinburg, Kreis;-;-;-;-;-;-
+31.12.2018;15367;      Schönebeck, Kreis;-;-;-;-;-;-
+31.12.2018;15369;      Wernigerode, Kreis;-;-;-;-;-;-
+31.12.2018;15370;      Altmarkkreis Salzwedel, Kreis;-;-;-;-;-;-
+31.12.2018;16;  Thüringen;29,2;29,1;29,2;44,7;37,4;52,6
+31.12.2018;16051;      Erfurt, krsfr. Stadt;29,5;29,5;29,4;36,9;31,2;42,8
+31.12.2018;16052;      Gera, krsfr. Stadt;29;29,3;28,6;52,6;43,1;62,4
+31.12.2018;16053;      Jena, krsfr. Stadt;28,8;28,4;29,2;34,8;28,7;41,4
+31.12.2018;16054;      Suhl, krsfr. Stadt;25,7;26,8;24,6;59,8;50,8;69,2
+31.12.2018;16055;      Weimar, krsfr. Stadt;31,2;32,2;30,1;39,1;32,7;45,5
+31.12.2018;16056;      Eisenach, krsfr. Stadt;29,8;30,7;28,8;45,3;36,1;55,2
+31.12.2018;16061;      Eichsfeld, Kreis;32,6;32;33,2;41,1;35,6;47,1
+31.12.2018;16062;      Nordhausen, Kreis;29,6;29,9;29,4;46,4;38,8;54,5
+31.12.2018;16063;      Wartburgkreis;29;29,1;29;43,9;37,3;51,1
+31.12.2018;16064;      Unstrut-Hainich-Kreis;31;31;31;43,8;36,9;51,2
+31.12.2018;16065;      Kyffhäuserkreis;28,4;28,9;27,9;48,2;40,5;56,5
+31.12.2018;16066;      Schmalkalden-Meiningen, Kreis;27,5;27;28,1;45,8;38,1;54,4
+31.12.2018;16067;      Gotha, Kreis;29,6;29,2;30,1;43,4;36,4;51
+31.12.2018;16068;      Sömmerda, Kreis;29,8;30,4;29,1;42,2;36,1;48,8
+31.12.2018;16069;      Hildburghausen, Kreis;27,5;26,9;28,1;42,3;34,7;50,6
+31.12.2018;16070;      Ilm-Kreis;28,6;27,9;29,4;44,7;36,2;54,3
+31.12.2018;16071;      Weimarer Land, Kreis;31,6;31,5;31,7;41,4;36,5;46,5
+31.12.2018;16072;      Sonneberg, Kreis;26,5;26,7;26,2;48,6;39,8;58
+31.12.2018;16073;      Saalfeld-Rudolstadt, Kreis;27,5;27,3;27,8;52,2;42,6;62,6
+31.12.2018;16074;      Saale-Holzland-Kreis;29,9;29,8;30;45,3;38,8;52,2
+31.12.2018;16075;      Saale-Orla-Kreis;29;28,8;29,1;46,9;38,4;56,2
+31.12.2018;16076;      Greiz, Kreis;28,1;28,4;27,7;52,8;44;62,2
+31.12.2018;16077;      Altenburger Land, Kreis;28,1;27,8;28,5;55,8;46,5;65,8
+__________;;;;;;;;
+"zu ""gesamte Tabelle"":
+Alle Länder: Die Entwicklung des Bevölkerungsstandes ab dem
+Berichtsjahr 2016 ist aufgrund methodischer Änderungen in
+den zugrunde liegenden Bevölkerungsbewegungsstatistiken nur
+bedingt mit den Werten vor 2016 vergleichbar. Einschrän-
+kungen bei der Genauigkeit der Ergebnisse können aus der er-
+höhten Zuwanderung und den dadurch bedingten Problemen bei
+der melderechtlichen Erfassung Schutzsuchender resultieren.";;;;;;;;
+"© Statistische Ämter des Bundes und der Länder, Deutschland, 2020.
+Dieses Werk ist lizenziert unter der Datenlizenz Deutschland
+- Namensnennung - Version 2.0.";;;;;;;;
+Stand: 24.01.2020 / 13:52:25;;;;;;;;

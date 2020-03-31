@@ -98,7 +98,8 @@ dependencies:
   - numpy=1.18.1=py36h4f9e942_0
   - numpy-base=1.18.1=py36hde5b4d6_1
   - openjpeg=2.3.0=h05c96fa_1
-  - openssl=1.1.1e=h7b6447c_0
+  - openssl=1.1.1f=h7b6447c_0
+  - palettable=3.3.0=py_0
   - pandas=1.0.3=py36h0573a6f_0
   - pandoc=2.2.3.2=0
   - pandocfilters=1.4.2=py36_1
@@ -121,6 +122,7 @@ dependencies:
   - pyproj=1.9.6=py36h14380d9_0
   - pyqt=5.9.2=py36h05f1152_2
   - pyrsistent=0.15.7=py36h7b6447c_0
+  - pysal=1.14.4.post1=py36_1
   - python=3.6.10=h191fe78_1
   - python-dateutil=2.8.1=py_0
   - pytz=2019.3=py_0

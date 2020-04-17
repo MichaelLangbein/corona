@@ -1,2 +1,2 @@
- - global models: see how they do in predicting local numbers
- - no2: subtract baseline non-car pollution
+- does it help to estimate alpha locally?
+- get good literature value for percentage of NO2 from traffic

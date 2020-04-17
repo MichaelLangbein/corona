@@ -1,1 +1,2 @@
-## spatial
+ - global models: see how they do in predicting local numbers
+ - no2: subtract baseline non-car pollution

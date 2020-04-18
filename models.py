@@ -132,7 +132,7 @@ def spatialModel(alpha0, alpha1, connectivity0, connectivity1,
     connectivity1 is a fraction of connectivity0
 """
 def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnectivity, 
-                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn):
+                        nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn):
 
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
@@ -146,7 +146,7 @@ def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnect
     connectivity1 is estimated from connectivity0 * fraction_NO2
 """
 def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial,
-                    nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, fractionNo2):
+                    nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, fractionNo2):
     
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
@@ -174,7 +174,7 @@ def estimateSpatialAlphas(values, Ks, connectivity):
     connectivity1 is estimated from connectivity0 * fraction_NO2
     alphas are calculated for each LK individually from measurements
 """
-def spatialModelNO2alpha(alpha0, fractionAlpha, fractionSpatial,
+def spatialModelNO2alpha(fractionSpatial,
                          Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, fractionNo2):
     
     nrPlaces, nrTimesteps = infectedMeasured.shape
@@ -229,5 +229,4 @@ def minimize(y_obs, model, startparas, bounds, sparas, errorMeassure):
         history.append({'paras': vparas, 'error': err})
         return err
     results = scpo.minimize(wrappedObjective, x0=startparas, bounds=bounds)
-    results.history = history
-    return results
+    return results, history

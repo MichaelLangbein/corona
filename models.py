@@ -20,6 +20,7 @@ def simpleModel(alpha,
     return infected
 
 
+
 def stepModel(alpha0, fractionAlpha, 
               nrPlaces, nrTimesteps, Ks, n0, T_stepAlpha):
     infected = np.zeros((nrPlaces, nrTimesteps))
@@ -37,6 +38,7 @@ def getNeighbors0(L):
     return np.eye(L, dtype=bool)
 
 
+
 def getNeighbors1(geometries):
     L = len(geometries)
     neighbors1st = np.zeros((L, L), dtype=bool)
@@ -46,6 +48,7 @@ def getNeighbors1(geometries):
                 neighbors1st[x, y] = True
                 neighbors1st[y, x] = True
     return neighbors1st
+
 
 
 @tabling
@@ -62,6 +65,7 @@ def getNeighborsNth(geometries, N):
     neighborsNmin1 = getNeighborsNth(geometries, N-1)
     neighborsN = neighborsNmin1.dot(neighborsNmin1) * ~neighborsNmin1
     return neighborsN
+
 
 
 def calcConnectivity(geometries, u):
@@ -85,6 +89,7 @@ def calcConnectivity(geometries, u):
     return connectivity
 
 
+
 def calcReducedConnectivity(connectivity, fractionNo2):
     connectivityReduced = np.copy(connectivity)
     X, Y = connectivity.shape
@@ -101,40 +106,93 @@ def calcReducedConnectivity(connectivity, fractionNo2):
     return connectivityReduced
 
 
-def spatialModel(alpha0, fractionAlpha, fractionSpatial, fractionConnectivity, 
+
+"""
+    generic spatial model
+"""
+def spatialModel(alpha0, alpha1, connectivity0, connectivity1, 
                  nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn):
+    
     infected = np.zeros((nrPlaces, nrTimesteps))
     infected[:, 0] = n0
+    
+    for t in range(nrTimesteps-1):
+        alpha = alpha0 if t < T_stepAlpha else alpha1
+        connectivity = connectivity0 if t < T_stepConn else connectivity1
+        
+        n_t = infected[:, t]
+        n_w = connectivity.dot(n_t)
+        dndt = alpha * n_w * (1 - n_t / Ks)
+        infected[:, t+1] = n_t + dndt
+
+    return infected
+
+
+"""
+    connectivity1 is a fraction of connectivity0
+"""
+def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnectivity, 
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn):
+
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
     connectivity1 = connectivity0 * fractionConnectivity
-    for t in range(nrTimesteps-1):
-        alpha = alpha0 if t < T_stepAlpha else alpha1
-        conct = connectivity0 if t < T_stepConn else connectivity1
-        for x in range(nrPlaces):
-            K = Ks[x]
-            nc = np.inner( conct[x, :], infected[:, t] )
-            dndt = alpha * nc * (1 - infected[x, t] / K)
-            infected[x, t+1] = infected[x, t] + dndt
-    return infected
+
+    return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
 
 
+"""
+    connectivity1 is estimated from connectivity0 * fraction_NO2
+"""
 def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial,
                     nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, fractionNo2):
-    infected = np.zeros((nrPlaces, nrTimesteps))
-    infected[:, 0] = n0
+    
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
     connectivity1 = calcReducedConnectivity(connectivity0, fractionNo2)
-    for t in range(nrTimesteps-1):
-        alpha = alpha0 if t < T_stepAlpha else alpha1
-        conct = connectivity0 if t < T_stepConn else connectivity1
-        for x in range(nrPlaces):
-            K = Ks[x]
-            nc = np.inner( conct[x, :], infected[:, t] )
-            dndt = alpha * nc * (1 - infected[x, t] / K)
-            infected[x, t+1] = infected[x, t] + dndt
-    return infected
+
+    return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+
+
+
+def estimateSpatialAlphas(values, Ks, connectivity):
+    values[values == 0] = 1  # for numeric reasons
+    n_t = values[:, :-1]
+    n_t1 = values[:, 1:]
+    L, T = n_t.shape
+    n_w = connectivity.dot(n_t)
+    K_sq = np.repeat([Ks], T, axis=0).T
+    invFracFree = K_sq / (K_sq - n_t)
+    alphas_t = invFracFree * (n_t1 - n_t) / n_w
+    alphas = np.mean(alphas_t, axis=1)
+    return alphas
+
+
+"""
+    connectivity1 is estimated from connectivity0 * fraction_NO2
+    alphas are calculated for each LK individually from measurements
+"""
+def spatialModelNO2alpha(alpha0, fractionAlpha, fractionSpatial,
+                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, fractionNo2):
+    
+    nrPlaces, nrTimesteps = infectedMeasured.shape
+    n0 = infectedMeasured[:, 0]
+
+    infectedMeasuredBefore = infectedMeasured[:, :T_stepAlpha]
+    infectedMeasuredAfter = infectedMeasured[:, T_stepAlpha:]
+
+    connectivity0 = calcConnectivity(geometries, fractionSpatial)
+    connectivity1 = calcReducedConnectivity(connectivity0, fractionNo2)
+    
+    alphas0 = estimateSpatialAlphas(infectedMeasuredBefore, Ks, connectivity0)
+    alphas1 = estimateSpatialAlphas(infectedMeasuredAfter, Ks, connectivity1) 
+
+    return spatialModel(alphas0, alphas1, connectivity0, connectivity1,
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+
+
 
 
 def msse(n_obs, n_sim):
@@ -143,12 +201,14 @@ def msse(n_obs, n_sim):
     return np.mean(err2_sum)
 
 
+
 def msseRelative(n_obs, n_sim, norm_by):
     # mse might give extra weight to large cities. This method normalizes all errors by population.
     err2 = (n_obs - n_sim)**2
     err2_sum = np.sum(err2, axis=1)
     err2_norm = err2_sum / norm_by
     return np.mean(err2_norm)
+
 
 
 def minimize(y_obs, model, vparas, sparas, startparas, bounds, errorMeassure):

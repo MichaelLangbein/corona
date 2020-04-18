@@ -118,3 +118,17 @@ def differenceMapRelative(model, paras):
     lksBdiff['diffSim'] = np.sum(y - y_sim, axis=1)
     lksBdiff['diffSimRel'] = lksBdiff['diffSim'] / lksBdiff['population']
     lksBdiff.plot(column='diffSimRel')
+
+def video(data):
+    T, X, Y = data.shape
+
+    fig = plt.figure()
+    ax = plt.axes(xlim=(0, Y), ylim=(0, X))
+    img = plt.imshow(data[0], animated=True)
+
+    def update(i):
+        img.set_data(data[i])
+        return [img]
+    
+    ani = FuncAnimation(fig, update, range(T), blit=True)
+    return ani

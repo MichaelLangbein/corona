@@ -161,9 +161,9 @@ def estimateSpatialAlphas(values, Ks, connectivity):
     values[values == 0] = 1  # for numeric reasons
     n_t = values[:, :-1]
     n_t1 = values[:, 1:]
-    L, T = n_t.shape
+    _, nrTimeSteps = n_t.shape
     n_w = connectivity.dot(n_t)
-    K_sq = np.repeat([Ks], T, axis=0).T
+    K_sq = np.repeat([Ks], nrTimeSteps, axis=0).T
     invFracFree = K_sq / (K_sq - n_t)
     alphas_t = invFracFree * (n_t1 - n_t) / n_w
     alphas = np.mean(alphas_t, axis=1)
@@ -198,20 +198,30 @@ def spatialModelNO2alpha(alpha0, fractionAlpha, fractionSpatial,
 def msse(n_obs, n_sim):
     err2 = (n_obs - n_sim)**2
     err2_sum = np.sum(err2, axis=1)
-    return np.mean(err2_sum)
+    return np.sum(err2_sum)
 
 
 
-def msseRelative(n_obs, n_sim, norm_by):
-    # mse might give extra weight to large cities. This method normalizes all errors by population.
-    err2 = (n_obs - n_sim)**2
-    err2_sum = np.sum(err2, axis=1)
-    err2_norm = err2_sum / norm_by
-    return np.mean(err2_norm)
+def getMsseRelative(norm_by):
+    # mse might give extra weight to large cities. This method normalizes all errors by <norm_by>.
+    def msseRelative(n_obs, n_sim):
+        _, nrTimeSteps = n_obs.shape
+        norm_by_sq = np.repeat([norm_by], nrTimeSteps, axis=0).T
+        n_obs_norm = n_obs / norm_by_sq
+        n_sim_norm = n_sim / norm_by_sq
+        return msse(n_obs_norm, n_sim_norm)
+    return msseRelative
 
 
-
-def minimize(y_obs, model, vparas, sparas, startparas, bounds, errorMeassure):
+"""
+    @y_obs
+    @model
+    @startparas: initial guess at the values of the parameters to be calibrated
+    @bounds: possible bounds for parameters to be calibrated
+    @sparas: static parameters that will *not* be calibrated
+    @errorMeassure: function of y_obs and y_sim to be minimized (usually mse)
+"""
+def minimize(y_obs, model, startparas, bounds, sparas, errorMeassure):
     history = []
     def wrappedObjective(vparas):
         y_sim = model(*vparas, *sparas)

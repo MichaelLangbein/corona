@@ -9,36 +9,22 @@ def plotSim(time, y_obs, y_sim):
     plt.xticks(timeV, time, rotation=90)
 
 
-def plotSimLks(mod, paras, lkNames):
-    y = landkreiseBayern[dateColNames].values
-    ySim = mod(*paras)
-    for lkName in lkNames:
-        i = list(landkreiseBayern.index).index(lkName)
-        plt.scatter(time, y[i])
-        plt.plot(time, ySim[i], label=lkName)
+def plotSimLks(time, y_obs, y_sim, indices, names):
+    timeV = np.arange(len(time))
+    for i, name in zip(indices, names):
+        plt.scatter(timeV, y_obs[i])
+        plt.plot(timeV, y_sim[i], label=name)
     plt.legend()
-    plt.xticks(range(len(dateColNames)), dateColNames.values, rotation=90)
+    plt.xticks(timeV, time, rotation=90)
 
 
-def plotSimLksRelative(mod, paras, lkNames):
-    y = landkreiseBayern[dateColNames].values
-    ySim = mod(*paras)
-    for lkName in lkNames:
-        i = list(landkreiseBayern.index).index(lkName)
-        pop = populationBayern[i]
-        plt.scatter(time, 1000 * y[i] / pop)
-        plt.plot(time, 1000 * ySim[i] / pop, label=lkName)
-    plt.legend()
-    plt.xticks(range(len(dateColNames)), dateColNames.values, rotation=90)
-
-def plotSimLksCuml(model, paras):
-    y = landkreiseBayern[dateColNames].values
-    y_sim = model(*paras)
-    y_cuml = np.sum(y, axis=0)
+def plotSimLksCuml(time, y_obs, y_sim):
+    timeV = np.arange(len(time))
+    y_obs_cuml = np.sum(y_obs, axis=0)
     y_sim_cuml = np.sum(y_sim, axis=0)
-    plt.scatter(time, y_cuml)
-    plt.plot(time, y_sim_cuml)
-    plt.xticks(range(len(dateColNames)), dateColNames.values, rotation=90)
+    plt.scatter(timeV, y_obs_cuml)
+    plt.plot(timeV, y_sim_cuml)
+    plt.xticks(timeV, time, rotation=90)
 
 
 def scatterHistory(hist, p1, p2, filterFunc, l1, l2, cmapName='viridis'):

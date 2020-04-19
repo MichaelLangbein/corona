@@ -1,2 +1,2 @@
-- does it help to estimate alpha locally?
 - get good literature value for percentage of NO2 from traffic
+- write down interpretation to the calibrated parameter values

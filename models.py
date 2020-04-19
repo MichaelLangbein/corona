@@ -175,7 +175,7 @@ def estimateSpatialAlphas(values, Ks, connectivity):
     alphas are calculated for each LK individually from measurements
 """
 def spatialModelNO2alpha(fractionSpatial,
-                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, fractionNo2):
+                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, fractionNo2, fullOutput = False):
     
     nrPlaces, nrTimesteps = infectedMeasured.shape
     n0 = infectedMeasured[:, 0]
@@ -189,8 +189,13 @@ def spatialModelNO2alpha(fractionSpatial,
     alphas0 = estimateSpatialAlphas(infectedMeasuredBefore, Ks, connectivity0)
     alphas1 = estimateSpatialAlphas(infectedMeasuredAfter, Ks, connectivity1) 
 
-    return spatialModel(alphas0, alphas1, connectivity0, connectivity1,
+    sim = spatialModel(alphas0, alphas1, connectivity0, connectivity1,
                         nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+
+    if fullOutput:
+        return sim, connectivity0, connectivity1, alphas0, alphas1
+    else:
+        return sim
 
 
 

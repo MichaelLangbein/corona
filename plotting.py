@@ -1,30 +1,46 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+
+
+def getIndex(name, names):
+    for i, n in names:
+        if n == name:
+            return i
 
 
 def plotSim(time, y_obs, y_sim):
     timeV = np.arange(len(time))
     plt.scatter(timeV, y_obs)
     plt.plot(timeV, y_sim)
-    plt.xticks(timeV, time, rotation=90)
+    plt.xticks(timeV, time, rotation=45)
+    for i, label in enumerate(plt.gca().get_xaxis().get_ticklabels()):
+        if i%4 != 0:
+            label.set_visible(False)
+    plt.xlabel('time')
+    plt.ylabel('n')
 
 
-def plotSimLks(time, y_obs, y_sim, indices, names):
+def plotSimMulti(time, y_obs, y_sim, names):
     timeV = np.arange(len(time))
-    for i, name in zip(indices, names):
+    for i, name in enumerate(names):
         plt.scatter(timeV, y_obs[i])
         plt.plot(timeV, y_sim[i], label=name)
-    plt.legend()
-    plt.xticks(timeV, time, rotation=90)
+    if len(names) < 6:
+        plt.legend()
+    plt.xticks(timeV, time, rotation=45)
+    for i, label in enumerate(plt.gca().get_xaxis().get_ticklabels()):
+        if i%4 != 0:
+            label.set_visible(False)
+    plt.xlabel('time')
+    plt.ylabel('n')
 
 
-def plotSimLksCuml(time, y_obs, y_sim):
-    timeV = np.arange(len(time))
+def plotSimCuml(time, y_obs, y_sim):
     y_obs_cuml = np.sum(y_obs, axis=0)
     y_sim_cuml = np.sum(y_sim, axis=0)
-    plt.scatter(timeV, y_obs_cuml)
-    plt.plot(timeV, y_sim_cuml)
-    plt.xticks(timeV, time, rotation=90)
+    plotSim(time, y_obs_cuml, y_sim_cuml)
 
 
 def scatterHistory(hist, p1, p2, filterFunc, l1, l2, cmapName='viridis'):
@@ -63,47 +79,16 @@ def plotNo2(lksNo2):
     lksNo2.plot(column='NO2_diff_frac', axes=axes[3])
 
 
-def plotLocalDifferences(model, paras):
-    y = landkreiseBayern[dateColNames].values
-    y_sim = model(*paras)
+def plotLocalDifferences(y_obs, y_sim):
     fig, axes = plt.subplots(1, 3)
-    axes[0].imshow(y)
+    axes[0].imshow(y_obs)
     axes[0].set_title('data')
-    axes[1].imshow((y - y_sim)**2)
+    axes[1].imshow((y_obs - y_sim)**2)
     axes[1].set_title('SE')
     axes[2].imshow(y_sim)
     axes[2].set_title('simulation')
 
-def plotLocalDifferencesRelative(model, paras):
-    y = landkreiseBayern[dateColNames].values
-    y_sim = model(*paras)
-    populationBayernRs = populationBayern.reshape(len(populationBayern), 1)
-    y_p = (y / populationBayernRs) * 10000
-    y_sim_p = (y_sim / populationBayernRs) * 10000
-    fig, axes = plt.subplots(1, 3)
-    axes[0].imshow(y_p)
-    axes[0].set_title('data')
-    axes[1].imshow((y_p - y_sim_p)**2)
-    axes[1].set_title('SE')
-    axes[2].imshow(y_sim_p)
-    axes[2].set_title('simulation')
 
-
-def differenceMap(model, paras):
-    y = landkreiseBayern[dateColNames].values
-    y_sim = model(*paras)
-    lksBdiff = landkreiseBayern.copy()
-    lksBdiff['diffSim'] = np.sum(y - y_sim, axis=1)
-    lksBdiff.plot(column='diffSim')
-
-
-def differenceMapRelative(model, paras):
-    y = landkreiseBayern[dateColNames].values
-    y_sim = model(*paras)
-    lksBdiff = landkreiseBayern.copy()
-    lksBdiff['diffSim'] = np.sum(y - y_sim, axis=1)
-    lksBdiff['diffSimRel'] = lksBdiff['diffSim'] / lksBdiff['population']
-    lksBdiff.plot(column='diffSimRel')
 
 def video(data):
     T, X, Y = data.shape

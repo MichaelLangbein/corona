@@ -90,14 +90,18 @@ def plotLocalDifferences(y_obs, y_sim):
 
 
 
-def video(data):
+def video(labels, data):
     T, X, Y = data.shape
+    minval = np.min(data)
+    maxval = np.max(data)
 
     fig = plt.figure()
     ax = plt.axes(xlim=(0, Y), ylim=(0, X))
-    img = plt.imshow(data[0], animated=True)
+    img = plt.imshow(data[0], animated=True, vmin=minval, vmax=maxval)
+    fig.colorbar(img)
 
     def update(i):
+        ax.set_title(labels[i])
         img.set_data(data[i])
         return [img]
     

@@ -145,12 +145,17 @@ def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnect
 """
     connectivity1 is estimated from connectivity0 * fraction_NO2
 """
-def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial,
-                    nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, fractionNo2):
+def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial, fractionNo2Traffic,
+                    nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, no2_before, no2_after):
     
+    no2_nontraffic = (1 - fractionNo2Traffic) * no2_before
+    no2_traffic_before = no2_before - no2_nontraffic
+    no2_traffic_after = no2_after - no2_nontraffic
+    no2_fraction = no2_traffic_after / no2_traffic_before
+
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
-    connectivity1 = calcReducedConnectivity(connectivity0, fractionNo2)
+    connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
 
     return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
                         nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
@@ -174,8 +179,13 @@ def estimateSpatialAlphas(values, Ks, connectivity):
     connectivity1 is estimated from connectivity0 * fraction_NO2
     alphas are calculated for each LK individually from measurements
 """
-def spatialModelNO2alpha(fractionSpatial,
-                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, fractionNo2, fullOutput = False):
+def spatialModelNO2alpha(fractionSpatial, fractionNo2Traffic,
+                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, no2_before, no2_after, fullOutput = False):
+
+    no2_nontraffic = (1 - fractionNo2Traffic) * no2_before
+    no2_traffic_before = no2_before - no2_nontraffic
+    no2_traffic_after = no2_after - no2_nontraffic
+    no2_fraction = no2_traffic_after / no2_traffic_before
     
     nrPlaces, nrTimesteps = infectedMeasured.shape
     n0 = infectedMeasured[:, 0]
@@ -184,7 +194,7 @@ def spatialModelNO2alpha(fractionSpatial,
     infectedMeasuredAfter = infectedMeasured[:, T_stepAlpha:]
 
     connectivity0 = calcConnectivity(geometries, fractionSpatial)
-    connectivity1 = calcReducedConnectivity(connectivity0, fractionNo2)
+    connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
     
     alphas0 = estimateSpatialAlphas(infectedMeasuredBefore, Ks, connectivity0)
     alphas1 = estimateSpatialAlphas(infectedMeasuredAfter, Ks, connectivity1) 

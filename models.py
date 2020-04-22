@@ -68,7 +68,7 @@ def getNeighborsNth(geometries, N):
 
 
 
-def calcConnectivity(geometries, u):
+def calcConnectivity(geometries, u1, u2):
     L = len(geometries)
     neighbors0th = getNeighborsNth(geometries, 0)
     neighbors1st = getNeighborsNth(geometries, 1)
@@ -79,9 +79,9 @@ def calcConnectivity(geometries, u):
             if neighbors0th[x, y]:
                 c = 1
             elif neighbors1st[x, y]:
-                c = u
+                c = u1
             elif neighbors2nd[x, y]:
-                c = u / 2
+                c = u2
             else:
                 c = 0.0
             connectivity[x, y] = c
@@ -131,11 +131,11 @@ def spatialModel(alpha0, alpha1, connectivity0, connectivity1,
 """
     connectivity1 is a fraction of connectivity0
 """
-def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnectivity, 
+def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, fractionConnectivity, 
                         nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn):
 
     alpha1 = alpha0 * fractionAlpha
-    connectivity0 = calcConnectivity(geometries, fractionSpatial)
+    connectivity0 = calcConnectivity(geometries, fractionSpatial1, fractionSpatial2)
     connectivity1 = connectivity0 * fractionConnectivity
 
     return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
@@ -145,7 +145,7 @@ def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial, fractionConnect
 """
     connectivity1 is estimated from connectivity0 * fraction_NO2
 """
-def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial, fractionNo2Traffic,
+def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, fractionNo2Traffic,
                     nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, no2_before, no2_after):
     
     no2_nontraffic = (1 - fractionNo2Traffic) * no2_before
@@ -154,7 +154,7 @@ def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial, fractionNo2Traffic,
     no2_fraction = no2_traffic_after / no2_traffic_before
 
     alpha1 = alpha0 * fractionAlpha
-    connectivity0 = calcConnectivity(geometries, fractionSpatial)
+    connectivity0 = calcConnectivity(geometries, fractionSpatial1, fractionSpatial2)
     connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
 
     return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
@@ -179,7 +179,7 @@ def estimateSpatialAlphas(values, Ks, connectivity):
     connectivity1 is estimated from connectivity0 * fraction_NO2
     alphas are calculated for each LK individually from measurements
 """
-def spatialModelNO2alpha(fractionSpatial, fractionNo2Traffic,
+def spatialModelNO2alpha(fractionSpatial1, fractionSpatial2, fractionNo2Traffic,
                          Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured, no2_before, no2_after, fullOutput = False):
 
     no2_nontraffic = (1 - fractionNo2Traffic) * no2_before
@@ -193,7 +193,7 @@ def spatialModelNO2alpha(fractionSpatial, fractionNo2Traffic,
     infectedMeasuredBefore = infectedMeasured[:, :T_stepAlpha]
     infectedMeasuredAfter = infectedMeasured[:, T_stepAlpha:]
 
-    connectivity0 = calcConnectivity(geometries, fractionSpatial)
+    connectivity0 = calcConnectivity(geometries, fractionSpatial1, fractionSpatial2)
     connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
     
     alphas0 = estimateSpatialAlphas(infectedMeasuredBefore, Ks, connectivity0)

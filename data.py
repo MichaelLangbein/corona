@@ -5,33 +5,14 @@ import geopandas as gpd
 import netCDF4 as nc
 
 
-shps = gpd.read_file('./data/landkreise_risklayer.geojson')
-shps = shps.rename(columns={'type': 'art', 'ags': 'AGS'})
-shps['AGS'] = shps['AGS'].astype(np.int64)
-vals = pd.read_csv('./data/values_landkreise_0904_no_ka.csv')
-
-data = pd.merge(shps, vals, left_on='AGS', right_on='AGS', how='left')
-data = data.set_index('name')
-
-dateColNames = data.columns[6:-2]
+data = gpd.read_file('./data/landkreise_no2_14d.json')
 
 landkreise = data[data.art == 'landkreis']
-landkreise[dateColNames] = landkreise[dateColNames].astype(np.int64)
-landkreise.current = landkreise.current.astype(np.int64)
-
 bundeslaender = data[data.art == 'bundesland']
-bundeslaender[dateColNames] = landkreise.groupby('partof')[dateColNames].sum()
-bundeslaender.current = landkreise.groupby('partof').current.sum()
-
-
-incubationTime = 7
-tCurfew = list(dateColNames.values).index('22.03.2020')
-tCurfewEffect = tCurfew + incubationTime
-
 
 rootgroupFebr = nc.Dataset("./data/no2_germany_february2020_1800.nc", "r")
-rootgroupMarch = nc.Dataset("./data/no2_germany_march2020_1800.nc", "r")
-rootgroupApril = nc.Dataset("./data/no2_germany_april2020_1800.nc", "r")
+rootgroupMarch = nc.Dataset("./data/no2_germany_march2020_0000.nc", "r")
+rootgroupApril = nc.Dataset("./data/no2_germany_april2020_0000.nc", "r")
 
 Tfeb, X, Y = rootgroupFebr['tcno2'].shape
 Tmarch, _, _ = rootgroupMarch['tcno2'].shape
@@ -63,16 +44,9 @@ for r in range(R):
                 break
 
 
-landkreise['obs_no2_mean_before'] = landkreise['obs_no2_before'].apply(np.mean)
-landkreise['obs_no2_mean_after'] = landkreise['obs_no2_after'].apply(np.mean)
+landkreise['obs_no2_midnight_mean_before'] = landkreise['obs_no2_before'].apply(np.mean)
+landkreise['obs_no2_midnight_mean_after'] = landkreise['obs_no2_after'].apply(np.mean)
 
-
-fractionNo2Traffic = 0.5
-landkreise['NO2_non_traffic'] = landkreise['obs_no2_mean_before'] * (1 - fractionNo2Traffic)
-landkreise['NO2_traffic_before'] = landkreise['obs_no2_mean_before'] * fractionNo2Traffic
-landkreise['NO2_traffic_after'] = landkreise['obs_no2_mean_after'] - landkreise['NO2_non_traffic']
-landkreise['NO2_diff'] = landkreise['NO2_traffic_after'] - landkreise['NO2_traffic_before']
-landkreise['NO2_diff_frac'] = landkreise['NO2_traffic_after'] / landkreise['NO2_traffic_before']
 
 landkreise.drop('obs_no2_before', 1, inplace=True)
 landkreise.drop('obs_no2_after', 1, inplace=True)

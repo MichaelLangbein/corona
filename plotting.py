@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 
 def getIndex(name, names):
-    for i, n in names:
+    for i, n in enumerate(names):
         if n == name:
             return i
 
@@ -107,3 +108,23 @@ def video(labels, data):
     
     ani = FuncAnimation(fig, update, range(T), blit=True)
     return ani
+
+
+def plot2PlusFrac(data, col0, col1):
+    minval = np.min(data[col0])
+    maxval = np.max(data[col1])
+    data[f"frac_{col1}_{col0}"] = data[col1] / data[col0]
+
+    fig, axes = plt.subplots(1, 3, figsize=(20,9))
+    divider0 = make_axes_locatable(axes[0])
+    divider1 = make_axes_locatable(axes[1])
+    cax0 = divider0.append_axes("right", size="5%", pad=0.1)
+    cax1 = divider1.append_axes("right", size="5%", pad=0.1)
+    data.plot(column=col0, axes=axes[0], legend=True, cax=cax0, vmin=minval, vmax=maxval)
+    data.plot(column=col1, axes=axes[1], legend=True, cax=cax1, vmin=minval, vmax=maxval)
+    data.plot(column=f"frac_{col1}_{col0}", axes=axes[2], legend=True, scheme='quantiles')
+    axes[0].set_title(col0)
+    axes[1].set_title(col1)
+    axes[2].set_title(f"frac_{col1}_{col0}")
+
+    data.drop(f"frac_{col1}_{col0}", axis=1, inplace=True)

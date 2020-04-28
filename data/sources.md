@@ -2,8 +2,14 @@
 
 ### Germany_xxx.csv and GermanyValues.csv
 From http://www.risklayer.com/de/:
+http://www.risklayer-explorer.com/event/100/detail
 http://www.risklayer-explorer.com/media/data/events/Germany_20200321v2.csv
 http://www.risklayer-explorer.com/media/data/events/GermanyValues.csv
+"Data can be used for reproduction with attribution to ""Risklayer GmbH (www.risklayer.com) and Center for Disaster Management and Risk Reduction Technology (CEDIM) at Karlsruhe Institute of Technology (KIT) and the Risklayer-CEDIM SARS-CoV-2 Crowdsourcing Contributors"".",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Data sources can be found under https://docs.google.com/spreadsheets/d/1wg-s4_Lz2Stil6spQEYFdZaBEp8nWW26gVyfHqvcl8s/edit?usp=sharing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Authors: James Daniell| Johannes Brand| Andreas Schaefer and the Risklayer-CEDIM SARS-CoV-2 Crowdsourcing Contributors through Risklayer GmbH and Center for Disaster Management and Risk Reduction Technology (CEDIM) at the Karlsruhe Institute of Technology (KIT). ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+
 
 Data is more current than RKI, requests are being made from risklayer and KIT directly to communes.
 

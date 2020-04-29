@@ -36,6 +36,19 @@ def leftInverse(x):
     return li
 
 
+def columnOffset(matrix, off):
+    R, C = matrix.shape
+    newMatrix = np.zeros((R, C))
+    newMatrix[:, off:] = matrix[:, :C-off]
+    return newMatrix
+
+
+def getNInfectious(n_obs, T_infectious):
+    healedOrDead = columnOffset(n_obs, T_infectious)
+    n_infectious = n_obs - healedOrDead
+    return n_infectious
+
+
 def calcChangeNormd(n_obs, Ks, delta=1):
     nrPlaces, nrTimesteps = n_obs.shape
     change_normd = np.zeros((nrPlaces, nrTimesteps))
@@ -47,17 +60,19 @@ def calcChangeNormd(n_obs, Ks, delta=1):
     return change_normd
 
 
-def estimateConnectivityFromObs(n_obs, Ks):
+def estimateConnectivityFromObs(n_obs, Ks, T_infectious):
+    n_infectious = getNInfectious(n_obs, T_infectious)
     change_normd = calcChangeNormd(n_obs, Ks)
-    n_ri = rightInverse(n_obs)
+    n_ri = rightInverse(n_infectious)
     conn = change_normd @ n_ri
     return conn
 
 
-def estimateAlphaFromConAndObs(n_obs, Ks, conn):
+def estimateAlphaFromConAndObs(n_obs, Ks, conn, T_infectious):
     L, _ = n_obs.shape
+    n_infectious = getNInfectious(n_obs, T_infectious)
     change_normd = calcChangeNormd(n_obs, Ks)
-    CN = conn @ n_obs
+    CN = conn @ n_infectious
     alphas = change_normd / CN
     alpha = np.zeros(L)
     for l in range(L):
@@ -80,26 +95,22 @@ def splitOutAlpha(conn):
 
 
 
-def simpleModel(alpha, 
-                nrPlaces, nrTimesteps, Ks, n0):
-    infected = np.zeros((nrPlaces, nrTimesteps))
-    infected[:, 0] = n0
-    for t in range(nrTimesteps-1):
-        dndt = alpha * infected[:, t] * (1 - infected[:, t] / Ks)
-        infected[:, t+1] = infected[:, t] + dndt
-    return infected
-
-
 
 def stepModel(alpha0, fractionAlpha, 
-              nrPlaces, nrTimesteps, Ks, n0, T_stepAlpha):
+              nrPlaces, nrTimesteps, Ks, n0, T_stepAlpha, T_infectious):
     infected = np.zeros((nrPlaces, nrTimesteps))
     infected[:, 0] = n0
     alpha1 = alpha0 * fractionAlpha
     for t in range(nrTimesteps-1):
         alpha = alpha0 if t < T_stepAlpha else alpha1
-        dndt = alpha * infected[:, t] * (1 - infected[:, t] / Ks)
-        infected[:, t+1] = infected[:, t] + dndt
+
+        n_t = infected[:, t]
+        t_healed = t - T_infectious
+        n_healedOrDead = infected[:, t_healed] if t_healed >= 0 else 0
+        n_infectious = n_t - n_healedOrDead
+        
+        dndt = alpha * n_infectious * (1 - n_t / Ks)
+        infected[:, t+1] = n_t + dndt
     return infected
 
 
@@ -158,7 +169,7 @@ def calcReducedConnectivity(connectivity, fractionNo2):
     generic spatial model
 """
 def spatialModel(alpha0, alpha1, connectivity0, connectivity1, 
-                 nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn):
+                 nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, T_infectious):
     
     infected = np.zeros((nrPlaces, nrTimesteps))
     infected[:, 0] = n0
@@ -168,7 +179,11 @@ def spatialModel(alpha0, alpha1, connectivity0, connectivity1,
         connectivity = connectivity0 if t < T_stepConn else connectivity1
 
         n_t = infected[:, t]
-        n_w = connectivity.dot(n_t)
+        t_healed = t - T_infectious
+        n_healedOrDead = infected[:, t_healed] if t_healed >= 0 else 0
+        n_infectious = n_t - n_healedOrDead
+
+        n_w = connectivity.dot(n_infectious)
         dndt = alpha * n_w * (1 - n_t / Ks)
         infected[:, t+1] = n_t + dndt
 
@@ -179,21 +194,21 @@ def spatialModel(alpha0, alpha1, connectivity0, connectivity1,
     connectivity1 is a fraction of connectivity0
 """
 def spatialModelFracConn(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, fractionConnectivity, 
-                        nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn):
+                        nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, T_infectious):
 
     alpha1 = alpha0 * fractionAlpha
     connectivity0 = calcConnectivity(geometries, fractionSpatial1, fractionSpatial2)
     connectivity1 = connectivity0 * fractionConnectivity
 
     return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
-                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, T_infectious)
 
 
 """
     connectivity1 is estimated from connectivity0 * fraction_NO2
 """
 def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, fractionTrafficMidnight, 
-                    nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, 
+                    nrPlaces, nrTimesteps, Ks, n0, geometries, T_stepAlpha, T_stepConn, T_infectious,  
                     no2_noon_before, no2_noon_after, no2_night_before, no2_night_after):
 
     z = np.zeros(nrPlaces)
@@ -207,7 +222,7 @@ def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, f
     connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
 
     return spatialModel(alpha0, alpha1, connectivity0, connectivity1,
-                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, T_infectious)
 
 
 
@@ -217,7 +232,7 @@ def spatialModelNO2(alpha0, fractionAlpha, fractionSpatial1, fractionSpatial2, f
     alphas are calculated for each LK individually from measurements
 """
 def spatialModelNO2alpha(fractionSpatial1, fractionSpatial2, fractionTrafficMidnight,
-                         Ks, geometries, T_stepAlpha, T_stepConn, infectedMeasured,
+                         Ks, geometries, T_stepAlpha, T_stepConn, T_infectious, infectedMeasured,
                          no2_noon_before, no2_noon_after, no2_night_before, no2_night_after,
                          fullOutput = False):
 
@@ -236,11 +251,11 @@ def spatialModelNO2alpha(fractionSpatial1, fractionSpatial2, fractionTrafficMidn
     connectivity0 = calcConnectivity(geometries, fractionSpatial1, fractionSpatial2)
     connectivity1 = calcReducedConnectivity(connectivity0, no2_fraction)
     
-    alphas0 = estimateAlphaFromConAndObs(infectedMeasuredBefore, Ks, connectivity0)
-    alphas1 = estimateAlphaFromConAndObs(infectedMeasuredAfter, Ks, connectivity1)
+    alphas0 = estimateAlphaFromConAndObs(infectedMeasuredBefore, Ks, connectivity0, T_infectious)
+    alphas1 = estimateAlphaFromConAndObs(infectedMeasuredAfter, Ks, connectivity1, T_infectious)
 
     sim = spatialModel(alphas0, alphas1, connectivity0, connectivity1,
-                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn)
+                        nrPlaces, nrTimesteps, n0, Ks, geometries, T_stepAlpha, T_stepConn, T_infectious)
 
     if fullOutput:
         return sim, connectivity0, connectivity1, alphas0, alphas1

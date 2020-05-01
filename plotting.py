@@ -91,12 +91,13 @@ def plotLocalDifferences(y_obs, y_sim):
 
 
 
-def video(labels, data):
+def video(title, labels, data):
     T, X, Y = data.shape
     minval = np.min(data)
     maxval = np.max(data)
 
     fig = plt.figure()
+    fig.suptitle(title)
     ax = plt.axes(xlim=(0, Y), ylim=(0, X))
     img = plt.imshow(data[0], animated=True, vmin=minval, vmax=maxval)
     fig.colorbar(img)
@@ -110,7 +111,82 @@ def video(labels, data):
     return ani
 
 
-def plot2PlusFrac(data, col0, col1):
+def multiVideo(title, labels, datas):
+    nrImages = len(datas)
+    T, R, C = datas[0].shape
+
+    fig, axes = plt.subplots(1, nrImages, figsize=(nrImages *4, 4))
+    fig.suptitle(title)
+    imgs = []
+    for i in range(nrImages):
+        axes[i].xlim = (0, C)
+        axes[i].ylim = (0, R)
+        minval = np.min(datas[i])
+        maxval = np.max(datas[i])
+        img = axes[i].imshow(datas[i][0], animated=True, vmin=minval, vmax=maxval)
+        divider = make_axes_locatable(axes[i])
+        cax = divider.append_axes("right", size="5%", pad=0.05)
+        fig.colorbar(img, cax=cax)
+        imgs.append(img)
+
+    def update(t):
+        for i in range(nrImages):
+            axes[i].set_title(labels[i][t])
+            imgs[i].set_data(datas[i][t])
+
+    ani = FuncAnimation(fig, update, range(T))
+    return ani
+
+
+def plot2PlusFracNP(title, heading0, heading1, heading2, data0, data1):
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+    
+    fig.suptitle(title)
+    R, C = data0.shape
+    allData = np.concatenate((data0, data1))
+    minval = np.min(allData)
+    maxval = np.max(allData)
+    data2 = data1 / data0
+
+    axes[0].xlim = (0, C)
+    axes[0].ylim = (0, R)
+    axes[0].set_title(heading0)
+    img0 = axes[0].imshow(data0, vmin=minval, vmax=maxval)
+    divider0 = make_axes_locatable(axes[0])
+    cax0 = divider0.append_axes("right", size="5%", pad=0.05)
+    fig.colorbar(img0, cax=cax0)
+
+    axes[1].xlim = (0, C)
+    axes[1].ylim = (0, R)
+    axes[1].set_title(heading1)
+    img1 = axes[1].imshow(data1, vmin=minval, vmax=maxval)
+    divider1 = make_axes_locatable(axes[1])
+    cax1 = divider1.append_axes("right", size="5%", pad=0.05)
+    fig.colorbar(img1, cax=cax1)
+
+    axes[2].xlim = (0, C)
+    axes[2].ylim = (0, R)
+    axes[2].set_title(heading2)
+    img2 = axes[2].imshow(data2)
+    divider2 = make_axes_locatable(axes[2])
+    cax2 = divider2.append_axes("right", size="5%", pad=0.05)
+    fig.colorbar(img2, cax=cax2)
+
+    return fig, axes
+
+
+def makeVideo(makeImgFunc, ts):
+    fig, axes = makeImgFunc(0)
+
+    def update(t):
+        makeImgFunc(t)
+
+    ani = FuncAnimation(fig, update, ts)
+    return ani
+
+
+
+def plot2PlusFracGeopandas(data, col0, col1):
     minval = np.min(data[col0])
     maxval = np.max(data[col1])
     data[f"frac_{col1}_{col0}"] = data[col1] / data[col0]

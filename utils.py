@@ -1,5 +1,4 @@
 def tabling(f):
-    tabling.execs = 0
     tabling.table = []
     def wrapped(*args, **kwargs):
         for (targs, tkwargs), tresult in tabling.table:
@@ -7,8 +6,6 @@ def tabling(f):
                 return tresult
         result = f(*args, **kwargs)
         tabling.table.append(((args, kwargs), result))
-        tabling.execs += 1
-        print(f"... {tabling.execs} calls made ...")
         return result
     wrapped.__name__ = 'w' + f.__name__
     return wrapped
